@@ -1,6 +1,7 @@
 # Group 14 Mentor Meeting Minutes
+04/16/23 over Zoom
 
-## Zoom Attendence
+## Attendence
 - Varun
 - Tim
 - Mary
