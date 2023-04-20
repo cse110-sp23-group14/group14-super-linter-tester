@@ -11,9 +11,11 @@
 |<div style="text-align: left; width: 500px"><img src="./team_page_images/QijunPic.jpeg" width=150  style="float: left; margin: 10px">Mary Hu <br>Developer<br>Bio: Fun fact: my birthday is 2^10...okay maybe not that fun :)) Hobbies: I like jigsaw puzzle!!</div>|<div style="text-align: left; width: 500px"><img src="./team_page_images/TimPic.jpg" width=150  style="float: left; margin: 10px">Tim Lacaba <br>Designer<br>Bio: Fun fact: I transferred from a community college in the Bay. My hobbies consist of camping and playing video games. I really want to learn Filipino so I can visit the Philippines and explore on my own. </div>|
 |<div style="text-align: left; width: 500px"><img src="./team_page_images/JimPic.jpg" width=150  style="float: left; margin: 10px">Jim Liu <br>Developer<br>Bio: I like to play Poker and ride mortorcycle. I also go to the gym sometimes. I have a pair of parrot and 6 button quails in my home and I am planning to hatch more quails in the future </div>|<div style="text-align: left; width: 500px"><img src="./team_page_images/YulinPic.png" width=150  style="float: left; margin: 10px">Luke Luo<br>Developer<br>Bio: I’m interested in coding, traveling and delicious food.</div>|
 
+---
 
+## Our GitHub Repository
 
-
+Link: https://github.com/cse110-sp23-group14/cse110-sp23-group14
 
 
 
