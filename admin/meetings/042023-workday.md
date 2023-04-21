@@ -37,3 +37,9 @@
 	- Multiple answers
 	- How responsive is the website to the questions
 	- Toggles to say if you like the answer or not
+
+## Main plan for 8-ball:
+
+- We ask ChapGPT for a jumping off point (today)
+- Get some working code with comments
+- Get some images generated for the website
