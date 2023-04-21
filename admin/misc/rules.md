@@ -18,7 +18,7 @@
 1. Expectations of Communication:
 	- Primary method of contact is slack
 	- Our general working hours will be 8 am to 8 pm on weekdays
-	- If you send someone a message outside of these working hours do not expect a timely response
+		- If you send someone a message outside of these working hours do not expect a timely response
 	- Be clear if you cannot make it to something
 		- React to meeting announcements with a thumbs up or check if you can go to the meeting.
 2. Division of Labor:
