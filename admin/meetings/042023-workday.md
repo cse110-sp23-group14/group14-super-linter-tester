@@ -43,3 +43,24 @@
 - We ask ChapGPT for a jumping off point (today)
 - Get some working code with comments
 - Get some images generated for the website
+
+
+## ChatGPT brainstorming
+### Sample ninja-themed magic 8 ball responses
+Sure! Here are some ninja-themed Magic 8 Ball responses for you:
+
+    Stealth is your ally.
+    The path of the ninja is yours to follow.
+    You will find success in the shadows.
+    Patience is the key to victory.
+    Strike quickly and without mercy.
+    Your destiny lies on the edge of a blade.
+    Trust in your training and you will prevail.
+    Honor and discipline will guide you.
+    The ninja knows when to act and when to wait.
+    Your enemies will fall before you like leaves in the wind.
+
+Remember, these responses are just for fun and not intended to provide actual advice or insight.
+
+### Ninja ideas
+A "ninja mode" that would allow the user to shake the ball silently, without making any noise, so as to not alert any enemies nearby.
