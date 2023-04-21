@@ -61,3 +61,6 @@ Sure! Here are some ninja-themed Magic 8 Ball responses for you:
     Your enemies will fall before you like leaves in the wind.
 
 Remember, these responses are just for fun and not intended to provide actual advice or insight.
+
+### Ninja ideas
+A "ninja mode" that would allow the user to shake the ball silently, without making any noise, so as to not alert any enemies nearby.
