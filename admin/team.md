@@ -5,13 +5,9 @@
 <img src="./team_page_images/NetNinjaLogo.jpg" width=150  style="margin: 10px">
 
 Our values:
-- Money
-- Power
 - Good Software Engineering
-- Networking
-- Pioneering
-- Powell
-- Warriors in 6.
+- Being Sneaky
+- Teamwork
 
 ---
 
