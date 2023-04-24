@@ -3,7 +3,7 @@
 
 <head>
   <title>Magic 8-Ball</title>
-  <link rel="stylesheet" href="b.css">
+  <link rel="stylesheet" href="8ball-styles.css">
 </head>
 
 <body>
@@ -12,39 +12,24 @@
     <input type="text" id="question-input" class="question-input" placeholder="Type your question here...">
 
     <details id="advanced">
-      <summary id="advanced-setting">Advanced Setting</summary>
+      <summary id="advanced-setting">Make your own answers</summary>
       <form id="question-form">
-        <!-- <label for="question-input">Enter your question:</label>
-        <input type="text" id="question-input" class="question-input"> -->
-        <label for="answer-a-input">Expected Answer 1:</label>
+        <label for="answer-a-input">Custom Answer 1:</label>
         <input type="text" id="answer-a-input" class="answer-input">
-        <label for="answer-b-input">Expected Answer 2:</label>
+        <label for="answer-b-input">Custom Answer 2:</label>
         <input type="text" id="answer-b-input" class="answer-input">
-        <label for="answer-c-input">Expected Answer 3:</label>
+        <label for="answer-c-input">Custom Answer 3:</label>
         <input type="text" id="answer-c-input" class="answer-input">
-        <label for="answer-d-input">Expected Answer 4:</label>
+        <label for="answer-d-input">Custom Answer 4:</label>
         <input type="text" id="answer-d-input" class="answer-input">
       </form>
     </details>
     <button type="submit" class="submit-btn" onclick="submitForm(event)">Ask</button>
 
-    <!-- <form id="question-form" onsubmit="submitForm(event);">
-      <label for="question-input">Enter your question:</label>
-      <input type="text" id="question-input" class="question-input">
-      <label for="answer-a-input">Option A:</label>
-      <input type="text" id="answer-a-input" class="answer-input">
-      <label for="answer-b-input">Option B:</label>
-      <input type="text" id="answer-b-input" class="answer-input">
-      <label for="answer-c-input">Option C:</label>
-      <input type="text" id="answer-c-input" class="answer-input">
-      <label for="answer-d-input">Option D:</label>
-      <input type="text" id="answer-d-input" class="answer-input">
-      <button type="submit" class="submit-btn">Ask</button>
-    </form> -->
     <div id="answer" class="answer"></div>
   </div>
 
-  <script src="bb1.js"></script>
+  <script src="8ball-script.js"></script>
 </body>
 
 </html>
