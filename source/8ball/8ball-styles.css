@@ -21,6 +21,7 @@ body, html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
 }
 
 /* Title styles */
@@ -31,6 +32,7 @@ body, html {
   margin-bottom: 50px;
   position: relative;
   text-shadow: 0px 0px 3px black;
+  font-family: 'Orbitron', sans-serif;
 }
 
 /* Form styles */
@@ -45,6 +47,7 @@ label {
   color: #FFD700;
   font-size: 18px;
   margin-bottom: 10px;
+  text-shadow: 0px 0px 5px black;
 }
 
 /* Input styles */
@@ -86,6 +89,7 @@ label {
   font-family: 'Orbitron', sans-serif;
   transition: background-color 0.3s ease-in-out;
   box-shadow: 0px 0px 10px black;
+  border-radius: 13px;
 }
 
 /* Answer styles */
@@ -95,22 +99,15 @@ label {
   color: #FFD700;
   text-align: center;
   font-family: 'Orbitron', sans-serif;
+  text-shadow: 0px 0px 5px black;
 }
 
 /* Additional Cyberpunk and Ninja Theme Styles */
-.container {
-  
-  box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
-}
 
-.title {
-  font-family: 'Orbitron', sans-serif;
-}
 
 .question-form {
   width: 100%;
 }
-
 
 
 .submit-btn:hover {
