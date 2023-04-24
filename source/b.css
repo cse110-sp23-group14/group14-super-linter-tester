@@ -10,7 +10,9 @@ body, html {
 .container {
   max-width: 500px;
   margin: 0 auto;
-  padding: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  overflow: auto;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -42,7 +44,7 @@ label {
 }
 
 /* Input styles */
-.question-input, .answer-input {
+.answer-input {
   width: 100%;
   padding: 10px;
   font-size: 16px;
@@ -50,7 +52,20 @@ label {
   background-color: #000;
   border: none;
   border-bottom: 2px solid #FFD700;
-  color: #FFD700;
+  color: #000;
+  margin: 1vh 0;
+}
+
+/* Input styles */
+.question-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  background-color: #000;
+  border: none;
+  /* border-bottom: 2px solid #FFD700; */
+  color: #000;
 }
 
 /* Submit button styles */
@@ -86,13 +101,20 @@ label {
   width: 100%;
 }
 
-.question-input, .answer-input {
-  background-color: #212121;
+.answer-input {
+  background-color: #d9d7d7f7;
   border-bottom: 2px solid #FFD700;
-  color: #FFD700;
+  color: #000;
+}
+
+.question-input {
+  background-color: #d9d7d7f7;
+  /* border-bottom: 2px solid #FFD700; */
+  color: #000;
 }
 
 .submit-btn {
+  width: 10vw;
   background-color: #FFD700;
   color: #000;
   font-family: 'Orbitron', sans-serif;
@@ -109,4 +131,14 @@ label {
   color: #FFD700;
   text-align: center;
   font-family: 'Orbitron', sans-serif;
+}
+
+#advanced {
+  width: 100%;
+  text-align: center;
+}
+
+#advanced-setting {
+  padding-bottom: 3vh;
+  font-size: 18px;
 }
