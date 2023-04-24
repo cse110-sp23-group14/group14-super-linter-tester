@@ -1,7 +1,10 @@
 body, html {
   margin: 0;
   padding: 0;
-  background-color: #000;
+  background-image: url(dream_anime.jpg); /* replace 'background-image.jpg' with the path to your image file */
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center 80%; /* Set the value to 'center bottom' */
   color: #FFD700;
   font-family: 'Orbitron', sans-serif;
 }
@@ -47,7 +50,6 @@ label {
   padding: 10px;
   font-size: 16px;
   margin-bottom: 20px;
-  background-color: #000;
   border: none;
   border-bottom: 2px solid #FFD700;
   color: #FFD700;
@@ -56,7 +58,6 @@ label {
 /* Submit button styles */
 .submit-btn {
   padding: 10px 20px;
-  background-color: #FFD700;
   color: #000;
   font-size: 18px;
   border: none;
@@ -66,15 +67,16 @@ label {
 
 /* Answer styles */
 .answer {
-  margin-top: 20px;
+  margin-top: 110px; /* Update the value to your desired margin */
   font-size: 24px;
   color: #FFD700;
   text-align: center;
+  font-family: 'Orbitron', sans-serif;
 }
 
 /* Additional Cyberpunk and Ninja Theme Styles */
 .container {
-  background-color: #000;
+  
   box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
 }
 
@@ -87,20 +89,20 @@ label {
 }
 
 .question-input, .answer-input {
-  background-color: #212121;
+  
   border-bottom: 2px solid #FFD700;
   color: #FFD700;
 }
 
 .submit-btn {
-  background-color: #FFD700;
+ 
   color: #000;
   font-family: 'Orbitron', sans-serif;
   transition: background-color 0.3s ease-in-out;
 }
 
 .submit-btn:hover {
-  background-color: #FFD700;
+  
   color: #000;
 }
 
