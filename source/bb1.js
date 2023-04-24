@@ -67,8 +67,8 @@ function displayAnswer(answer) {
 function submitForm(event) {
   event.preventDefault(); // Prevent form submission
   getAnswer(); // Call getAnswer() function to handle form submission
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 3c982235e22ffb21587b6454481df1bf33d1b1c1
+
+
+
