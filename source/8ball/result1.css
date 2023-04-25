@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+    margin: 0;
+  }
+  
+  /* Set container to flexbox and center its contents */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("aa.png"); /* Add background image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center; /* Center the background image */
+    position: relative; /* Set container as relative for positioning of child elements */
+  }
+  
+  /* Set title to white and increase font size */
+  .title {
+    color: white;
+    font-size: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .title p {
+    margin: 0; /* Remove default margin on <p> element */
+  }
+  
+  /* Set answer to slowly jump out and set color to white */
+  .answer {
+    animation-name: jump;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    color: white;
+  }
+  
+  /* Define keyframes for jump animation */
+  @keyframes jump {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Set background picture and cover the entire page */
+  .container::before {
+    content: "";
+    background-color: rgba(0,0,0,0.6); /* Add a semi-transparent overlay on top of the background image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
