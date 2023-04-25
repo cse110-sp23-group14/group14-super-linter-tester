@@ -1,3 +1,17 @@
+var audioContext;
+var bufferSource;
+
+function submitForm(event) {
+  event.preventDefault(); // Prevent form submission
+  getAnswer(); // Call getAnswer() function to handle form submission
+
+  // Redirect to result.html page with a delay of 2 seconds
+  setTimeout(function() {
+    localStorage.setItem("answer", sessionStorage.getItem("answer"));
+    window.location.href = "result.html";
+  }, 2000);
+}
+
 function getAnswer() {
   // Get question input value
   const questionInput = document.getElementById("question-input");
@@ -16,25 +30,24 @@ function getAnswer() {
   // Generate a random answer if only question is provided
   if (question && !answerA && !answerB && !answerC && !answerD) {
     randomAnswer = getRandomAnswer();
-    displayAnswer(randomAnswer);
+    // Store the answer in session storage
+    sessionStorage.setItem("answer", randomAnswer);
   }
   // Choose an answer from provided options if available
   else if (question && (answerA || answerB || answerC || answerD)) {
     const options = [answerA, answerB, answerC, answerD].filter(option => option !== "");
     if (options.length > 0) {
       const randomOption = options[Math.floor(Math.random() * options.length)];
-      displayAnswer(randomOption);
+      // Store the answer in session storage
+      sessionStorage.setItem("answer", randomOption);
     } else {
-      // If no valid options are provided, show error message
-      displayAnswer("Error: No valid options provided");
+      // If no valid options are provided, store error message in session storage
+      sessionStorage.setItem("answer", "Error: No valid options provided");
     }
   } else {
-    // If no question is provided, show error message
-    displayAnswer("Error: Please enter a question");
+    // If no question is provided, store error message in session storage
+    sessionStorage.setItem("answer", "Error: Please enter a question");
   }
-
-  // Prevent form submission
-  return false;
 }
 
 function getRandomAnswer() {
@@ -59,16 +72,26 @@ function getRandomAnswer() {
   return answers[Math.floor(Math.random() * answers.length)];
 }
 
-function displayAnswer(answer) {
-  const answerElement = document.getElementById("answer");
-  answerElement.textContent = answer;
+function displayAnswer() {
+  const answer = sessionStorage.getItem("answer");
+  const resultAnswerElement = document.getElementById("answer");
+  resultAnswerElement.textContent = answer;
 }
 
-function submitForm(event) {
-  event.preventDefault(); // Prevent form submission
-  getAnswer(); // Call getAnswer() function to handle form submission
+// Add an event listener for the window load event
+window.addEventListener("load", function() {
+  displayAnswer();
+});
 
-}
-
+// Add an event listener for the play event on the document
+document.addEventListener("DOMContentLoaded", function() {
+  if (audioContext === undefined) {
+    // Create an AudioContext on the first play event
+    audioContext = new AudioContext();
+    bufferSource = audioContext.createBufferSource();
+    bufferSource.connect(audioContext.destination);
+    bufferSource.start();
+  }
+});
 
 
