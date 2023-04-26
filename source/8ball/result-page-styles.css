@@ -23,15 +23,12 @@
     font-size: 48px;
     display: flex;
     flex-direction: column;
-    font-family: 'Orbitron', sans-serif;
-    /*align-items:center*/
   }
   
   .title p {
     margin: 0; /* Remove default margin on <p> element */
     margin-bottom: 200px;
     margin-left:60px;
-    font-family: 'Orbitron', sans-serif;
   }
   
   /* Set answer to slowly jump out and set color to white */

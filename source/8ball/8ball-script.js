@@ -59,7 +59,6 @@ function getAnswer() {
 }
 
 function getRandomAnswer() {
-  // Add more random answers here
   const ninjaAnswers = [
     "The way of the ninja is not always clear. Ask again later.",
     "The answer is hidden in the shadows. Seek it out.",
