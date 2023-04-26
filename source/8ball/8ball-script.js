@@ -12,7 +12,7 @@ function submitForm(event) {
   setTimeout(function() {
     localStorage.setItem("answer", sessionStorage.getItem("answer"));
     window.location.href = "result-page.html";
-  }, 2000);
+  }, 5000);
 }
 
 function playNinjaMusic() {
