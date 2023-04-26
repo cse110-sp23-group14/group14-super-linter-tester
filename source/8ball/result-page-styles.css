@@ -1,6 +1,7 @@
   body {
     background-color: black;
     margin: 0;
+    font-family: 'Orbitron', sans-serif;
   }
   
   /* Set container to flexbox and center its contents */
@@ -22,6 +23,7 @@
     font-size: 48px;
     display: flex;
     flex-direction: column;
+    font-family: 'Orbitron', sans-serif;
     /*align-items:center*/
   }
   
@@ -29,6 +31,7 @@
     margin: 0; /* Remove default margin on <p> element */
     margin-bottom: 200px;
     margin-left:60px;
+    font-family: 'Orbitron', sans-serif;
   }
   
   /* Set answer to slowly jump out and set color to white */

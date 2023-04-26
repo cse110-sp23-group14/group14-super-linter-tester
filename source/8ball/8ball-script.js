@@ -3,7 +3,7 @@ var bufferSource;
 
 function submitForm(event) {
   //play mystical music
-  playNinjaMusic();
+  playSound("8ball-noise");
 
   event.preventDefault(); // Prevent form submission
   getAnswer(); // Call getAnswer() function to handle form submission
@@ -12,11 +12,11 @@ function submitForm(event) {
   setTimeout(function() {
     localStorage.setItem("answer", sessionStorage.getItem("answer"));
     window.location.href = "result-page.html";
-  }, 5000);
+  }, 2000);
 }
 
-function playNinjaMusic() {
-  const audio = document.getElementById("mystical-music");
+function playSound(id) {
+  const audio = document.getElementById(id);
   audio.play();
 }
 
