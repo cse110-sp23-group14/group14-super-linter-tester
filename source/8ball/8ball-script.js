@@ -3,7 +3,7 @@ var bufferSource;
 
 function submitForm(event) {
   //play mystical music
-  playNinjaMusic();
+  playSound("8ball-noise");
 
   event.preventDefault(); // Prevent form submission
   getAnswer(); // Call getAnswer() function to handle form submission
@@ -15,8 +15,8 @@ function submitForm(event) {
   }, 2000);
 }
 
-function playNinjaMusic() {
-  const audio = document.getElementById("mystical-music");
+function playSound(id) {
+  const audio = document.getElementById(id);
   audio.play();
 }
 
@@ -59,7 +59,6 @@ function getAnswer() {
 }
 
 function getRandomAnswer() {
-  // Add more random answers here
   const ninjaAnswers = [
     "The way of the ninja is not always clear. Ask again later.",
     "The answer is hidden in the shadows. Seek it out.",
