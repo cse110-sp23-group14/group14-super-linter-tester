@@ -11,7 +11,7 @@ function submitForm(event) {
   // Redirect to result.html page with a delay of 2 seconds
   setTimeout(function() {
     localStorage.setItem("answer", sessionStorage.getItem("answer"));
-    window.location.href = "result.html";
+    window.location.href = "result-page.html";
   }, 2000);
 }
 
