@@ -42,34 +42,29 @@ function getAnswer() {
       sessionStorage.setItem("answer", randomOption);
     } else {
       // If no valid options are provided, store error message in session storage
-      sessionStorage.setItem("answer", "Error: No valid options provided");
+      sessionStorage.setItem("answer", "The ninja senses your confusion. Please enter a valid option and try again.");
     }
   } else {
     // If no question is provided, store error message in session storage
-    sessionStorage.setItem("answer", "Error: Please enter a question");
+    sessionStorage.setItem("answer", "Our ninja skills are sharp, but even the most skilled ninja requires a question to reveal the truth.");
   }
 }
 
 function getRandomAnswer() {
   // Add more random answers here
-  const answers = [
-    "It is certain",
-    "It is decidedly so",
-    "Without a doubt",
-    "Yes, definitely",
-    "You may rely on it",
-    "As I see it, yes",
-    "Most likely",
-    "Outlook good",
-    "Yes",
-    "Signs point to yes",
-    "Reply hazy, try again",
-    "Ask again later",
-    "Better not tell you now",
-    "Cannot predict now",
-    "Concentrate and ask again"
+  const ninjaAnswers = [
+    "The way of the ninja is not always clear. Ask again later.",
+    "The answer is hidden in the shadows. Seek it out.",
+    "The ninja spirit says yes, but beware of traps.",
+    "The ninja stars align in your favor. Signs point to yes.",
+    "The path you seek requires discipline and focus. Outlook good.",
+    "The ninja way demands patience and perseverance. Signs point to yes.",
+    "Your question carries the weight of the samurai. Outlook uncertain.",
+    "To reveal the answer, you must first master the art of stealth. Try again later.",
+    "The ninja code demands secrecy. Reply hazy, try again.",
+    "The answer is shrouded in mystery. Concentrate and ask again."
   ];
-  return answers[Math.floor(Math.random() * answers.length)];
+  return ninjaAnswers[Math.floor(Math.random() * ninjaAnswers.length)];
 }
 
 function displayAnswer() {
