@@ -97,4 +97,6 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-
+function redirect() {
+  window.location.href = "index.html";
+}
