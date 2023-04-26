@@ -10,7 +10,10 @@
       <p>Magic 8-Ball Results</p>
     </div>
     <div id="answer" class="answer"></div>
-    <audio id="music-player" src="m.mp3" autoplay></audio>
+    <audio id="mystical-music">
+      <source src="m.mp3" type="audio/mpeg">
+    </audio> <!-- only keep if we play music -->
+    <button type="submit" class="submit-btn" onclick="playNinjaMusic()">Ninja mode</button>
   </div>
   <script src="8ball-script.js"></script>
 </body>
