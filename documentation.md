@@ -13,10 +13,10 @@ We did stuff
 
 ### Created By: Group 14, The Net Ninjas
 
--Melody Gill
--Qijun Hu
--Tim Lacaba
--Wincy Liang
+*Melody Gill
+*Qijun Hu
+*Tim Lacaba
+*Wincy Liang
 -Changming Liu
 -Yulin Luo
 -Nicholas Nakano
