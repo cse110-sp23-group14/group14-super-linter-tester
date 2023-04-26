@@ -1,13 +1,13 @@
-#8-Ball Ninja Ball
+# 8-Ball Ninja Ball
 
-##What it does: 
+## What it does: 
 blah blah blah
 
-##Features:
+## Features:
 
-##Development Process:
+## Development Process:
 
-###Created By: Group 14, The Net Ninjas
+### Created By: Group 14, The Net Ninjas
 Melody Gill
 Qijun Hu
 Tim Lacaba
