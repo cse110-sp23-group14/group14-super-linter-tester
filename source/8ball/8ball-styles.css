@@ -1,7 +1,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  background-image: url(dream_extended.png); /* replace 'background-image.jpg' with the path to your image file */
+  background-image: url(assets/images/dream_extended.png); /* replace 'background-image.jpg' with the path to your image file */
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center 80%; /* Set the value to 'center bottom' */

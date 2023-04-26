@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url("aa.png"); /* Add background image */
+    background-image: url("assets/images/result-background.png"); /* Add background image */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center; /* Center the background image */
