@@ -2,6 +2,9 @@ var audioContext;
 var bufferSource;
 
 function submitForm(event) {
+  //play mystical music
+  playNinjaMusic();
+
   event.preventDefault(); // Prevent form submission
   getAnswer(); // Call getAnswer() function to handle form submission
 
@@ -10,6 +13,11 @@ function submitForm(event) {
     localStorage.setItem("answer", sessionStorage.getItem("answer"));
     window.location.href = "result-page.html";
   }, 2000);
+}
+
+function playNinjaMusic() {
+  const audio = document.getElementById("mystical-music");
+  audio.play();
 }
 
 function getAnswer() {

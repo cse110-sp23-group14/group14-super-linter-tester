@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Magic 8-Ball Results</title>
-  <link rel="stylesheet" href="result1.css">
+  <link rel="stylesheet" href="result-page-styles.css">
 </head>
 <body>
   <div class="container">
@@ -10,7 +10,10 @@
       <p>Ninja 8-Ball Results</p>
     </div>
     <div id="answer" class="answer"></div>
-    <audio id="music-player" src="m.mp3" autoplay></audio>
+    <audio id="mystical-music">
+      <source src="assets/ninja-thinking-music.mp3.mp3" type="audio/mpeg">
+    </audio> <!-- only keep if we play music -->
+    <button type="submit" class="submit-btn" onclick="playNinjaMusic()">Ninja mode</button>
     <button type="submit" id="submit-btn" class="submit-btn" onclick="redirect()">Go Back</button>
   </div>
   <script src="8ball-script.js"></script>
