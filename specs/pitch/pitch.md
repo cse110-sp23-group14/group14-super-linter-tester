@@ -23,11 +23,11 @@ Fortune-telling is the act of trying to gain information about the future. This 
 ### Persona 3: John
 > John is a graphic designer. He is married and has two young children. John is passionate about his work and enjoys taking on new design projects. He is also an avid gamer and enjoys playing video games in his free time. John values his family time and wants to be able to balance his work and personal life effectively. He wants astrological advice on time management in order to live each day in proper alignment with the planets.
 
-
-
+### Persona 4: Amy  
+> Amy is a 21-year old, majoring in Biotech, but works as a barista at Starbucks to pay for her school supplies. She got into astrology a long time ago, and so she is fully invested in astrology. She downloads an astrology application because she feels like she wants a place where she can recieve a daily horoscope to consult every morning before she walks out the door. After getting the app, she's had a lot of help bringing some order to her days thanks to the daily horoscope. She even checks up on her friends whose signs recieved bad reads for the day.
 
 ## <ins>**The Product**</ins>
-A horoscope/astrology app that allows users to receive their daily horoscopes as well as learn more about how horoscopes work
+A horoscope/astrology app that allows users to receive their daily horoscopes as well as learn more about how horoscopes work 
 
 ### **Features**:
 * Daily horoscopes based on user's birthday
