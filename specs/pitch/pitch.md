@@ -53,9 +53,9 @@ A horoscope/astrology app that allows users to receive their daily horoscopes as
 * Real time chat hard to implement
 * There is a risk that users may become overly reliant on the app's predictions or interpretations and develop unrealistic expectations or false hope. 
 * Privacy and data concerns
-    * protecting users personal information 
+    * protecting users' personal information 
     * protecting the result of the users
-* Negative experience that users might thought answers not accurate or misleading
-* may cause some mental health problems(?)
+* Negative experience if users find answers to be inaccurate or misleading
+* may cause some mental health problems based on unfulfilled expectations
 * Developing accurate and insightful interpretations for the app's divination features can be challenging
 *  We cannot get astrology wrong, because it will be obvious (if Mercury is not actually in retrograde but we say it is, it will offend astrology believers) 
