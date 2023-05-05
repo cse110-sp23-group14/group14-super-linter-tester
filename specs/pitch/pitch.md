@@ -58,4 +58,4 @@ A horoscope/astrology app that allows users to receive their daily horoscopes as
 * Negative experience that users might thought answers not accurate or misleading
 * may cause some mental health problems(?)
 * Developing accurate and insightful interpretations for the app's divination features can be challenging
-*  We cannot get astrology wrong, if Mercury is not in retrograde today it could not be more over
+*  We cannot get astrology wrong, because it will be obvious (if Mercury is not actually in retrograde but we say it is, it will offend astrology believers) 
