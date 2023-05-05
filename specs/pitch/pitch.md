@@ -15,7 +15,7 @@ Fortune-telling is the act of trying to gain information about the future. This 
 ## <ins>**Who is using it?**</ins>
 
 ### Persona 1: Chad
-> Chad is a 30-year-old who is curious about his future. He downloads a fortune-telling app and uses its horoscope feature to get an outlook on the rest of his day. He begins to take the horoscopes seriously, and begins to tailor his life choices around them. After beginning this, he's felt like he's had a lot more confidence in 
+> Chad is a 30-year-old who is curious about his future. He downloads a fortune-telling app and uses its horoscope feature to get an outlook on the rest of his day. He begins to take the horoscopes seriously, and begins to tailor his life choices around them. After beginning this, he's felt like he's had a lot more confidence in his path in life. 
 
 ### Persona 2: Samantha
 > Samantha, a 25-year-old student, is unsure about her career path. She downloads a fortune-telling app and asks about her future. The app generates a tarot card spread and advises her to pursue her passion for writing. Samantha takes a creative writing class, gains confidence, and becomes a freelance writer. She credits the app for giving her clarity and confidence.
