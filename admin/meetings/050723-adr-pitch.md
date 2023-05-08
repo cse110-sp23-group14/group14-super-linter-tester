@@ -3,6 +3,14 @@
 ## 05/07/23 7pm over Zoom
 
 ## Attendence
+- Varun
+- Jim
+- Jisol
+- Melody
+- Luke
+- Mary
+- Nicholas
+- Wincy
 
 ## Agenda
 1. Announcements
