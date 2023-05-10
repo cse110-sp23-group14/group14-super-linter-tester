@@ -69,19 +69,28 @@ A horoscope/astrology app that allows users to receive their daily horoscopes as
 * Daily horoscopes based on user's birthday
     * Will also include other astrological phenomena such as:
         * Planets in retrograde
-        * Rising Signs
+        *  Rising Signs
         * 
 * Social aspect: you can share your horoscope with friends
   * Copy/paste like Wordle
 * Compatiblity checker: enter another person's birthday and we will show level of astrological compatibility
 * chatbot or chat room (not sure)
 * Personalized account
-* Compatibility checker: e
+* Compatibility checker
 * Feedback and improvement
 * Community feature
 
 ### **Visual Representations**  
 
+#### Flow Chart
+
+![flowchart](diagram.drawio.png)
+
+#### App Visuals Ideas
+
+![desktop1](resources/images/desktop_design.jpg)
+![desktop2](resources/images/desktop_popup.jpg)
+![mobile1](resources/images/mobile_design.jpg)
 
 
 ### **Risks and Rabbit Holes**
