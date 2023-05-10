@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta name="theme-color" content="#009578">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ninja 8-Ball</title>
+  <meta charset="UTF-8">
   <link rel="stylesheet" href="8ball-styles.css">
   <link rel="manifest" href="manifest.json">
-  <link rel="apple-touch-icon" href="assets/images/icons/icon192.png">
-  <link rel="icon" href="assets/images/icons/icon192.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -40,4 +38,23 @@
   <script src="8ball-script.js"></script>
 </body>
 
+<script>
+  window.addEventListener('load', () => {
+    registerSW();
+  });
+
+  // Register the Service Worker
+  async function registerSW() {
+    if ('serviceWorker' in navigator) {
+      try {
+        await navigator
+              .serviceWorker
+              .register('serviceworker.js');
+      }
+      catch (e) {
+        console.log('SW registration failed');
+      }
+    }
+  }
+</script>
 </html>
