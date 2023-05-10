@@ -1,0 +1,1 @@
+//store name+bday in local storage for now
