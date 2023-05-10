@@ -1,0 +1,124 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-image: url(assets/images/dream_extended.png); /* replace 'background-image.jpg' with the path to your image file */
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center 80%; /* Set the value to 'center bottom' */
+  color: #FFD700;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Container for the form and answer */
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  overflow: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Title styles */
+.title {
+  font-size: 48px;
+  color: #FFD700;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  text-shadow: 0px 0px 3px black;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Form styles */
+.question-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Label styles */
+label {
+  color: #FFD700;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-shadow: 0px 0px 5px black;
+}
+
+/* Input styles */
+.answer-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 2px solid #FFD700;
+  color: #000;
+  margin: 1vh 0;
+  background-color: #d9d7d7f7;
+}
+
+/* Input styles */
+.question-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  background-color: #d9d7d7f7;
+  border: none;
+  color: #000;
+  box-shadow: 0px 0px 10px black;
+}
+
+/* Submit button styles */
+.submit-btn {
+  padding: 10px 20px;
+  color: #000;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 10vw;
+  background-color: #FFD700;
+  font-family: 'Orbitron', sans-serif;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0px 0px 10px black;
+  border-radius: 13px;
+}
+
+/* Answer styles */
+.answer {
+  margin-top: 110px; /* Update the value to your desired margin */
+  font-size: 24px;
+  color: #FFD700;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0px 0px 5px black;
+}
+
+/* Additional Cyberpunk and Ninja Theme Styles */
+
+
+.question-form {
+  width: 100%;
+}
+
+
+.submit-btn:hover {
+  color: #000;
+}
+
+#advanced {
+  width: 100%;
+  text-align: center;
+}
+
+#advanced-setting {
+  padding-bottom: 3vh;
+  font-size: 18px;
+  text-shadow: 0px 0px 5px black;
+}
