@@ -2,8 +2,7 @@ var audioContext;
 var bufferSource;
 
 function submitForm(event) {
-  //play mystical music
-  playSound("8ball-noise");
+  
 
   event.preventDefault(); // Prevent form submission
   getAnswer(); // Call getAnswer() function to handle form submission
@@ -15,10 +14,7 @@ function submitForm(event) {
   }, 2000);
 }
 
-function playSound(id) {
-  const audio = document.getElementById(id);
-  audio.play();
-}
+
 
 function getAnswer() {
   // Get question input value
@@ -85,16 +81,7 @@ window.addEventListener("load", function() {
   displayAnswer();
 });
 
-// Add an event listener for the play event on the document
-document.addEventListener("DOMContentLoaded", function() {
-  if (audioContext === undefined) {
-    // Create an AudioContext on the first play event
-    audioContext = new AudioContext();
-    bufferSource = audioContext.createBufferSource();
-    bufferSource.connect(audioContext.destination);
-    bufferSource.start();
-  }
-});
+
 
 function redirect() {
   window.location.href = "index.html";

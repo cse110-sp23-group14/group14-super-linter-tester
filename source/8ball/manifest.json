@@ -1,7 +1,20 @@
 {
- "name": "a",
- "shortname":"b",
-  "start_url":"."
-  "background_color":"#6dcdb1"
-  "theme_color":"#009578"
-}
+  "name": "a",
+  "shortname":"b",
+  "start_url":".",
+  "background_color": "#6dcdb1",
+  "theme_color": "#009578",
+  "display": "standalone",
+  "icons": [
+  {
+  "src": "assets/images/icons/icon192.png",
+  "sizes": "192x192",
+  "type": "image/png"
+  },
+  {
+  "src": "assets/images/icons/icon512.png",
+  "sizes": "512x512",
+  "type": "image/png"
+  }
+  ]
+  }
