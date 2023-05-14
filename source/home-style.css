@@ -1,5 +1,24 @@
+.title-box {
+    display: flex;
+    justify-content: center;
+    background-color: #EDEADC;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
 #title-text {
-    text-align: center;
+    font: 96px 'Roboto', sans-serif;
+    display: inline;
+}
+
+#title-logo {
+    height: 200px;
+    width: 200px;
+    padding-left: 40px;
+}
+
+.bolded {
+    font-weight: bold;
 }
 
 #settings-button {
