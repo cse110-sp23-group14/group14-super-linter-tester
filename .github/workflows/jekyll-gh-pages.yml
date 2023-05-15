@@ -28,6 +28,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+        with:
+          ref: test-8ball-PWA
+          # Put the checked out files inside the `big-island-buses/heleon` folder
+          path: main/test-8ball-PWA
+          clean: false
+      - run: rm -rf main/test-8ball-PWA/.git
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
