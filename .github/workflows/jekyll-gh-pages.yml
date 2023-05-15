@@ -4,7 +4,7 @@ name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches: ["main", "fortune-telling-dev", "test-8ball-PWA"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -28,13 +28,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      #Adds the test-8ball-PWA branch to the pages
       - uses: actions/checkout@v3
         with:
           ref: test-8ball-PWA
-          # Put the checked out files inside the `big-island-buses/heleon` folder
           path: main/test-8ball-PWA
           clean: false
       - run: rm -rf main/test-8ball-PWA/.git
+      #Adds the fortune-telling-dev branch to the pages
+      - uses: actions/checkout@v3
+        with:
+          ref: fortune-telling-dev
+          path: main/fortune-telling-dev
+          clean: false
+      - run: rm -rf main/fortune-telling-dev/.git
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
