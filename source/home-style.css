@@ -17,6 +17,18 @@
     padding-left: 40px;
 }
 
+.text-box {
+    display: flex;
+    justify-content: center;
+    background-color: #282525;
+    padding: 15px;
+}
+
+.text-box>p {
+    color: white;
+    font: 20px 'Roboto-monospace', monospace;
+}
+
 .bolded {
     font-weight: bold;
 }
