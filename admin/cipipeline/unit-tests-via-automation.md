@@ -36,7 +36,7 @@ test('properly adds two numbers', ()=>{
 ```
 
 This is what it looks like when you run `npm test`:
-![alt text](result-test.png)
+![alt text](result-jest.png)
     
  
 (tutorial link)[https://www.youtube.com/watch?v=FgnxcUQ5vho]  
