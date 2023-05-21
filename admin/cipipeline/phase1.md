@@ -10,7 +10,7 @@
 - Your horoscope is ... 
 
 ![CICD Pipeline Diagram](phase1.png)
-<!---  Use phase1.png, phase1.drawio.png doesn't have some icons show up for some reason  -->
+<!---  Use phase1.png, phase1.drawio.png doesn't have some icons show up for some reason, and if you want to make edits, export as .drawio file and import into https://app.diagrams.net/ -->
 
 ## linting and code style enforcement
 We are using VSCode for linter...
