@@ -17,10 +17,15 @@ jobs:
         with:
           source_dir: ./source
           output_dir: ./out
-          recurse: true
-          # config_file: ../documentation/conf.json
+          # config_file: conf.json
           template: minami
           front_page: README.md
+
+      - name: Deploy Documentation
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./out
 
 # jobs:
 #   documentation:
