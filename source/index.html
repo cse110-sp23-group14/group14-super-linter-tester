@@ -3,14 +3,15 @@
 
 <head>
   <title>Horoscope App</title>
-  <link rel="stylesheet" href="home-style.css">
+  <link rel="stylesheet" href="styles/home-style.css">
   <meta charset="UTF-8">
   <link rel="manifest" href="manifest.json">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-  <button id="settings-button">Settings</button>
+  <!-- <button id="settings-button">Settings</button> -->
+  <a class="button" id="settings-button" href="settings.html">Settings</a>
 
   <div class="title-box">
     <h1 id="title-text">welcome to <span class="bolded">Horoscope</span></h1>
@@ -19,6 +20,20 @@
 
   <div class="box" id="horoscope-box">
     <p>Your horoscope is.....</p>
+  </div>
+
+  <div class="box" id="horoscope-popup-box">
+    <a class="button" href="#horoscope-popup">Today's horoscope</a>
+  </div>
+  
+  <div id="horoscope-popup" class="overlay">
+    <div class="popup">
+      <h2>Your Daily Horoscope</h2>
+      <a class="close" href="#">&times;</a>
+      <div class="content">
+        Today you will have the best day ever! Today you will have the best day ever! Today you will have the best day ever! Today you will have the best day ever! Today you will have the best day ever! Today you will have the best day ever! Today you will have the best day ever! Today you will have the best day ever! Today you will have the best day ever! Today you will have the best day ever! Today you will have the best day ever! Today you will have the best day ever! Today you will have the best day ever! Today you will have the best day ever! Today you will have the best day ever! Today you will have the best day ever! 
+      </div>
+    </div>
   </div>
 
   <div class="flex-container">
