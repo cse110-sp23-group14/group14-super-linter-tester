@@ -2,9 +2,12 @@
 
 ## What is currently functional
 - Homepage 
+- Settings Page Button
 
 ## What is Planned/In Progress
-- Everything else 
+- Learn more page
+- Check your compatability 
+- Your horoscope is ... 
 
 ## linting and code style enforcement
 
