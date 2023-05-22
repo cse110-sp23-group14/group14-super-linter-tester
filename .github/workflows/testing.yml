@@ -17,8 +17,9 @@ jobs:
                     ref: fortune-telling-dev
                     path: fortune-telling-dev
                     clean: false
-            - run: npm install jest
-            - uses: stefanoeb/jest-action@1.0.3
+            - run: cd fortune-telling-dev
+            - run: npm ci
+            - run: npm test
               
             
 
