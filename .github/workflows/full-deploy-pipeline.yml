@@ -21,3 +21,4 @@ jobs:
         uses: ./.github/workflows/documentation.yml
     build-gh-pages:
         uses: ./.github/workflows/jekyll-gh-pages.yml
+        needs: documentation
