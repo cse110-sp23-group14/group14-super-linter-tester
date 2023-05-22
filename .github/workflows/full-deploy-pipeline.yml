@@ -2,7 +2,7 @@ name: Full CI/CD Pipeline
 
 on:
     push:
-        branches: []
+        branches: [main]
     
 jobs:
     testing:
@@ -16,14 +16,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Documentation
-              uses: actions/checkout@v3
-            - run: echo "TODO documentation"
-                #TODO: Call documentation.yml
+              uses: ./github/workflows/documentation.yml
     build-gh-pages:
         runs-on: ubuntu-latest
         steps:
             - name: Depolyment
-              uses: actions/checkout@v3
-            - run: echo "TODO deploy"
-            #TODO: Call jekyll-gh-pages.yml
+              uses: ./github/workflows/jekyll-gh-pages.yml
     
