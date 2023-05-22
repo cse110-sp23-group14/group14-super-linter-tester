@@ -16,7 +16,7 @@
 
 
 ## Linting and Code Style Enforcement
-We are using VSCode for linter...
+We are using VSCode as our linter. It will analyze our source code for us and flag programming errors, stylistic errors, bugs, inconsistencies, and other problems in general. 
 
 ## Code Quality Via Tool
 We are using CodeClimate to enforce code quality. It will help us to write pure code, which will be easy-to-read and have practical results. 
