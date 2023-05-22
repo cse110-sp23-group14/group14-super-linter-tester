@@ -2,7 +2,7 @@ name: Full CI/CD Pipeline
 
 on:
     push:
-        branches: [main]
+        branches: ["main", "fortune-telling-dev", "test-8ball-PWA"]
 
 permissions:
     contents: read
