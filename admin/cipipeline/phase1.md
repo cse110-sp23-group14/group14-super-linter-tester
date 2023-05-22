@@ -36,7 +36,7 @@ We are also checking code quality manually. For example, PULL REQUESTS.
 ## Unit Tests Via Automation
 We are using Jest to write our unit tests. It is important to write unit tests to make sure our code works as expected. We need to make sure there are no bugs, edge cases, or other bad things that the user could encounter. 
 
-## documentation generation via automation
+## Documentation Generation Via Automation
 We are using JSDocs to automatically generate documentation for all `.js` file in `sources` and save the documentation to a new branch called `documentation`. It's important to keep documentation for our code because it increases readability and extensibility, and automating this process can save a lot of time.
 
 
