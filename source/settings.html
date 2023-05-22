@@ -10,13 +10,30 @@
 <body>
     <h1>Settings</h1>
 
-    <div id="name-info"></div>
-    <form onsubmit="saveUserName()">
-        <label for="name">Change name:</label><br>
-        <input type="text" id="name" name="name"><br>
-        <input type="submit" value="Submit">
-    </form> 
+    <div id="name-info"></div><br>
 
+    <div id="change-name">
+        <form onsubmit="saveUserName()">
+            <label for="name">Change name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <input type="submit" value="Submit">
+        </form> 
+    </div>
+    <button id="clear-name-button">Clear Name</button>
+    <br>
+
+    <div id="birthday-info"></div><br>
+    
+    <div id="change-birthday">
+        <form onsubmit="saveBirthday()">
+            <label for="birthday">Change birthday:</label><br>
+            <input type="text" id="birthday" name="birthday"><br>
+            <input type="submit" value="Submit">
+        </form> 
+    </div>
+    <button id="clear-birthday-button">Clear Birthday</button>
+    <br>
+    
     <script src="home-script.js"></script>
 </body>
 </html>
