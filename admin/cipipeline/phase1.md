@@ -3,6 +3,7 @@
 ## What is currently functional
 - Homepage 
 - Settings Page Button
+- Today's horoscope text box pop-up
 
 ## What is Planned/In Progress
 - Learn more page
