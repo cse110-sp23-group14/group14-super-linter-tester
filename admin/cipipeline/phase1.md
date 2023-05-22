@@ -16,7 +16,7 @@
 We are using VSCode for linter...
 
 ## code quality via tool
-We are using CodeClimate to enforce code quality. We deploy Mantainability checks that rates according to:
+We are using **CodeClimate** to enforce code quality. Maintainability is an estimate of technical debt in the repo based on a standardized 10-point assessment of Duplication, Cyclomatic Complexity, Cognitive Complexity, and structural issues. We currently deploy Mantainability checks that rates according to:
 - Argument count
 - Complex logic
 - File length
