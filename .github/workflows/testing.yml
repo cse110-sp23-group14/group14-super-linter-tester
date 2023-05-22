@@ -20,6 +20,8 @@ jobs:
             - run: cd fortune-telling-dev
             - run: cd source
             - run: npm install jest
+            - run: touch package.json
+            - run: echo {"scripts":{"test":"jest"}} >> package.json
             - run: npm test
               
             
