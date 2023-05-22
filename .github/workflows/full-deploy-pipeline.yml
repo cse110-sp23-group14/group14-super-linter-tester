@@ -13,6 +13,6 @@ jobs:
             - run: echo "TODO Testing"
                 #TODO: Create testing framework
     documentation:
-        uses: ./github/workflows/documentation.yml
+        uses: ./github/workflows/documentation.yml@v1
     build-gh-pages:
         uses: ./github/workflows/jekyll-gh-pages.yml@v1
