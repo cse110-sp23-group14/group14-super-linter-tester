@@ -1,0 +1,32 @@
+body{
+    background: linear-gradient(to right, #4a73c2,#752fac) ;
+}
+.container{
+    display:flex;
+    align-items: center;
+}
+.navigation{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+
+    
+}
+h1{
+    margin-top: 115px;
+    margin-left:100px ;
+    font-size: 50px;
+}
+
+.subhead{
+    display:flex;
+    justify-content:space-between ; 
+    align-items: baseline;
+
+   
+}
+.subheading{
+    font-size: large;
+    margin-left: 500px;
+   
+}
