@@ -17,7 +17,8 @@ jobs:
                     ref: fortune-telling-dev
                     path: fortune-telling-dev
                     clean: false
-            
+            - run: cd fortune-telling-dev
+            - run: cd source
             - run: npm ci
             - run: npm test
               
