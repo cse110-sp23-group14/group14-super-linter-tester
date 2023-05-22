@@ -1,4 +1,3 @@
-name: codeClimateBuild
 
 version: "2"         # required to adjust maintainability checks
 
@@ -38,11 +37,11 @@ checks:
   similar-code:
     enabled: true
     config:
-      threshold: #language-specific defaults. overrides affect all languages.
+      threshold: 45
   identical-code:
     enabled: true
     config:
-      threshold: #language-specific defaults. overrides affect all languages.
+      threshold: 45
 
 ## we don't use any extra checker for now
 # plugins:
