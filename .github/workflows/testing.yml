@@ -19,7 +19,6 @@ jobs:
                     clean: false
             
             - run: npm init -y 
-            - run: npm ci
             - run: npm i --save-dev jest
             - run: npm test
               
