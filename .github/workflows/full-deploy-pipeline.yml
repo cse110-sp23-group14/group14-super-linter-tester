@@ -16,10 +16,12 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Documentation
-              uses: ./github/workflows/documentation.yml
+              uses: actions/checkout@v3 
+                    ./github/workflows/documentation.yml
     build-gh-pages:
         runs-on: ubuntu-latest
         steps:
             - name: Depolyment
-              uses: ./github/workflows/jekyll-gh-pages.yml
+              uses: actions/checkout@v3 
+                    ./github/workflows/jekyll-gh-pages.yml
     
