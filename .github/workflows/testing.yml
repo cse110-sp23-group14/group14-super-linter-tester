@@ -19,7 +19,7 @@ jobs:
                     clean: false
             - run: cd fortune-telling-dev
             - run: cd source
-            - run: npm ci
+            - run: npm install jest
             - run: npm test
               
             
