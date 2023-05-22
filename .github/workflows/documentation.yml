@@ -4,6 +4,7 @@ on:
   push:
     branches:
     - main
+    - fortune-telling-dev
 
 jobs:
   documentation:
