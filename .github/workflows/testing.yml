@@ -19,6 +19,7 @@ jobs:
                     clean: false
             
             - run: npm init -y 
+            - run: npm install jest
             - run: npm i --save-dev jest
             - run: npm test
               
