@@ -16,7 +16,15 @@
 We are using VSCode for linter...
 
 ## code quality via tool
-We are using CodeClimate to enforce code quality. It will help us to write pure code, which will be easy-to-read and have practical results. 
+We are using CodeClimate to enforce code quality. We deploy Mantainability checks that rates according to:
+- Argument count
+- Complex logic
+- File length
+- identical blocks of code
+- Method count, length, and complexity
+- Nested control flow
+- Return statements
+- Similar block of code
 
 ## code quality via human review
 We are also checking code quality manually. For example, PULL REQUESTS. 
