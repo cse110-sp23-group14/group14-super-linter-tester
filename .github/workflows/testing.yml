@@ -21,7 +21,7 @@ jobs:
             - run: cd source
             - run: npm install jest
             - run: touch package.json
-            - run: echo {"scripts":{"test":"jest"}} >> package.json
+            - run: echo "{\n"scripts":{"test":"jest"}\n}" >> package.json
             - run: npm test
               
             
