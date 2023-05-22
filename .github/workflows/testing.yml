@@ -17,13 +17,7 @@ jobs:
                     ref: fortune-telling-dev
                     path: fortune-telling-dev
                     clean: false
-            - run: cd fortune-telling-dev
-            - run: cd source
-            - run: npm install jest
-            - run: touch package.json
-            - run: echo "{\n"scripts":{"test":"jest"}\n}" >> package.json
-            - run: cat package.json
-            - run: npm test
+            - uses: stefanoeb/jest-action@1.0.3
               
             
 
