@@ -7,14 +7,30 @@ on:
 jobs:
     code-linting:
         runs-on: ubuntu-latest
-        #TODO: Call codeclimate.yml
+        steps:
+            - name: Linting
+              uses: actions/checkout@v3
+                - run echo "TODO Linting"
+                #TODO: Call codeclimate.yml
     testing:
         runs-on: ubuntu-latest
-        #TODO: Create testing framework
+        steps:
+            - name: Testing
+              uses: actions/checkout@v3
+                - run echo "TODO Testing"
+                #TODO: Create testing framework
     documentation:
         runs-on: ubuntu-latest
-        #TODO: Call documentation.yml
+        steps:
+            - name: Documentation
+              uses: actions/checkout@v3
+                - run echo "TODO documentation"
+                #TODO: Call documentation.yml
     build-gh-pages:
         runs-on: ubuntu-latest
-        #TODO: Call jekyll-gh-pages.yml
+        steps:
+            - name: Depolyment
+              uses: actions/checkout@v3
+                - run echo "TODO deploy"
+                #TODO: Call jekyll-gh-pages.yml
     
