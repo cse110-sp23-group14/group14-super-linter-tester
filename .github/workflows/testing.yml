@@ -2,7 +2,8 @@ name: Testing workflow
 
 on:
     push:
-        branches: [main, fortune-telling-dev]
+        branches: [fortune-telling-dev]
+    workflow_call:
 
 jobs:
     testing:
