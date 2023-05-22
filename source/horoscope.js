@@ -7,6 +7,7 @@
 function generateHoroscope(user) {
     return "I love astrology!";
 }
+module.exports = generateHoroscope;
 
 /**
  * Retrieves information about the conditions of the day and returns them as an object.
