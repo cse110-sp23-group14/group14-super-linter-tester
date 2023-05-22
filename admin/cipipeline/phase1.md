@@ -19,8 +19,16 @@
 ## Linting and Code Style Enforcement
 We are using VSCode as our linter. It will analyze our source code for us and flag programming errors, stylistic errors, bugs, inconsistencies, and other problems in general. 
 
-## Code Quality Via Tool
-We are using CodeClimate to enforce code quality. It will help us to write pure code, which will be easy-to-read and have practical results. 
+## code quality via tool
+We are using **CodeClimate** to enforce code quality. Maintainability is an estimate of technical debt in the repo based on a standardized 10-point assessment of Duplication, Cyclomatic Complexity, Cognitive Complexity, and structural issues. We currently deploy Mantainability checks that rates according to:
+- Argument count
+- Complex logic
+- File length
+- identical blocks of code
+- Method count, length, and complexity
+- Nested control flow
+- Return statements
+- Similar block of code
 
 ## Code Quality Via Human Review
 We are also checking code quality manually. For example, PULL REQUESTS. 
