@@ -9,15 +9,12 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
+              with:
+                ref: fortune-telling-dev
+                clean: false
             - uses: actions/setup-node@v3
               with:
                     node-version: 18
-            - uses: actions/checkout@v3
-              with:
-                    ref: fortune-telling-dev
-                    path: fortune-telling-dev
-                    clean: false
-            - run: cd fortune-telling-dev
             - run: npm ci
             - run: npm test
               
