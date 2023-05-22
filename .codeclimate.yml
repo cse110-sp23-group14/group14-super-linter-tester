@@ -1,6 +1,4 @@
-
-version: "2"         # required to adjust maintainability checks
-
+version: "2"
 checks:
   argument-count:
     enabled: true
@@ -42,16 +40,11 @@ checks:
     enabled: true
     config:
       threshold: 45
-
-## we don't use any extra checker for now
-# plugins:
-#   eslint:
-#     enabled: true
-#     channel: "eslint-6"
-#   rubocop:
-#     enabled: true
-#     channel: "rubocop-0-79"
-
+plugins:
+ rubocop:
+  enabled: true
+ eslint:
+  enabled: true
 exclude_patterns:
 - "config/"
 - "db/"
@@ -62,7 +55,5 @@ exclude_patterns:
 - "**/spec/"
 - "**/test/"
 - "**/tests/"
-- "Tests/"
 - "**/vendor/"
-- "**/*_test.go"
 - "**/*.d.ts"
