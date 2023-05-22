@@ -18,10 +18,7 @@ jobs:
                     path: fortune-telling-dev
                     clean: false
             
-            - run: npm init -y 
             - run: npm ci
-            - run: npm install jest
-            - run: npm i --save-dev jest
             - run: npm test
               
             
