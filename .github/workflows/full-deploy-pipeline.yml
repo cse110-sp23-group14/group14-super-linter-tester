@@ -2,7 +2,7 @@ name: Full CI/CD Pipeline
 
 on:
     push:
-        branches: ["main", "fortune-telling-dev", "test-8ball-PWA"]
+        branches: [main, fortune-telling-dev, test-8ball-PWA]
 
 permissions:
     contents: read
@@ -11,12 +11,7 @@ permissions:
     
 jobs:
     testing:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Testing
-              uses: actions/checkout@v3
-            - run: echo "TODO Testing"
-                #TODO: Create testing framework
+        uses: ./.github/workflows/testing.yml
     documentation:
         uses: ./.github/workflows/documentation.yml
     build-gh-pages:
