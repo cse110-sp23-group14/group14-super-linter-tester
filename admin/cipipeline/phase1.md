@@ -19,7 +19,7 @@
 We are using VSCode as our linter. It will analyze our source code for us and flag programming errors, stylistic errors, bugs, inconsistencies, and other problems in general. 
 
 ## code quality via tool
-We are using **CodeClimate** to enforce code quality. Maintainability is an estimate of technical debt in the repo based on a standardized 10-point assessment of Duplication, Cyclomatic Complexity, Cognitive Complexity, and structural issues. We currently deploy Mantainability checks that rates according to:
+We are using **CodeClimate** to enforce code quality. Maintainability([see config here](https://github.com/cse110-sp23-group14/cse110-sp23-group14/blob/fortune-telling-dev/.codeclimate.yml)) is an estimate of technical debt in the repo based on a standardized 10-point assessment of Duplication, Cyclomatic Complexity, Cognitive Complexity, and structural issues. We currently deploy Mantainability checks that rates according to:
 - Argument count
 - Complex logic
 - File length
