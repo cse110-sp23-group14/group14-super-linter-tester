@@ -1,0 +1,36 @@
+name: Full CI/CD Pipeline
+
+on:
+    push:
+        branches: []
+    
+jobs:
+    code-linting:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Linting
+              uses: actions/checkout@v3
+            - run: echo "TODO Linting"
+                #TODO: Call codeclimate.yml
+    testing:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Testing
+              uses: actions/checkout@v3
+            - run: echo "TODO Testing"
+                #TODO: Create testing framework
+    documentation:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Documentation
+              uses: actions/checkout@v3
+            - run: echo "TODO documentation"
+                #TODO: Call documentation.yml
+    build-gh-pages:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Depolyment
+              uses: actions/checkout@v3
+            - run: echo "TODO deploy"
+            #TODO: Call jekyll-gh-pages.yml
+    

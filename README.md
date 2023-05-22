@@ -12,4 +12,6 @@
 
 ## Fortune Telling Dev
 
+<a href="https://codeclimate.com/github/cse110-sp23-group14/cse110-sp23-group14/maintainability"><img src="https://api.codeclimate.com/v1/badges/8f2ee10c3081178fffa7/maintainability" /></a>
+
 [Fortiune Telling Dev](https://cse110-sp23-group14.github.io/cse110-sp23-group14/main/fortune-telling-dev/source/index.html)
