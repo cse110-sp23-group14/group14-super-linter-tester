@@ -16,11 +16,11 @@ window.addEventListener('DOMContentLoaded',function(){
 
     if(currentDateStr===reportDatestr){
         var isread=localStorage.getItem('report_read');
-        if(isread) daily_report.classList.add('hightlight');
+        if(isread) daily_report.classList.add('highlight');
     }
    
     daily_report.addEventListener('click',function(){
-        daily_report.classList.remove('hightlight');
+        daily_report.classList.remove('highlight');
         localStorage.setItem('report_read', true);
     })
 
