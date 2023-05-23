@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded',function(){
     var currentDate = new Date();
     var currentDateStr=currentDate.toDateString();
 
-    var reportDate=new Date();
+    var reportDate=new Date(currentDate);
     var reportDatestr=reportDate.toDateString();
 
     if(currentDateStr===reportDatestr){
