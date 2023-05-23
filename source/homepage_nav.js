@@ -15,8 +15,8 @@ window.addEventListener('DOMContentLoaded',function(){
     var reportDatestr=reportDate.toDateString();
 
     if(currentDateStr===reportDatestr){
-        var isread=localStorage.getItem('report_read');
-        if(isread) daily_report.classList.add('highlight');
+        var isread=this.localStorage.getItem('report_read');
+        if(!isread) daily_report.classList.add('highlight');
     }
    
     daily_report.addEventListener('click',function(){
