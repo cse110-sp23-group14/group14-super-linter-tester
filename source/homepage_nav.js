@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded',function(){
     daily_report.addEventListener('click',function(){
         daily_report.classList.remove('highlight');
         localStorage.setItem('report_read', true);
-    })
+    });
 
 
-})
+});
