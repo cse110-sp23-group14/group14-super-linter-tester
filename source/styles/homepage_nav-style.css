@@ -16,6 +16,9 @@ body{
 .close-button:hover .close-symbol{
     animation:shining 1s infinite;
 }
+/*
+* make close sign/symbol shining when hovering over 
+*/
 @keyframes shining{
     0%{opacity: 0;}
     50%{opacity: 1;}
@@ -38,7 +41,7 @@ body{
     display:flex;
     align-items: baseline; 
 }
-
+/* zodiak */
 .subheading{
     margin-left:1000px; 
     font-family: "Lora",serif;
@@ -52,10 +55,32 @@ body{
 .option{
     text-decoration: none;
 }
+/* highlight new daily report*/
+.highlight{
+    color:#FEBD38;
+}
 .explore:hover,
 .report:hover,
 .compatibility:hover{
-    color:#FEBD38;
+    /*color:#FEBD38;*/
+    animation:glowing 1s infinite;
+}
+/*
+* make text glowing when hovering over
+*/
+@keyframes glowing {
+    0% {
+        color: #EDEADC;
+        text-shadow: 0 0 5px #EDEADC, 0 0 10px #EDEADC, 0 0 20px #EDEADC;
+    }
+    50% {
+        color: #752fac;
+        text-shadow: 0 0 5px #752fac, 0 0 10px #752fac, 0 0 20px #752fac;
+    }
+    100% {
+        color: #EDEADC;
+        text-shadow: 0 0 5px #EDEADC, 0 0 10px #EDEADC, 0 0 20px #EDEADC;
+    }
 }
 
 /* media queries */
