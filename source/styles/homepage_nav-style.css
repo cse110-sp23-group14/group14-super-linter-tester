@@ -5,9 +5,10 @@ body{
 .close-symbol{
     margin-top:10px;
     margin-right: 90px;
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: 10;
     color:#edeadc;
+    margin-left: 20px;
 }
 /*remove the default underline when using <a>*/
 .close-button{
