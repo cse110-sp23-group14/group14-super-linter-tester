@@ -11,8 +11,14 @@ window.addEventListener('DOMContentLoaded',function(){
     var currentDate = new Date();
     var currentDateStr=currentDate.toDateString();
 
-    var reportDate=new Date(currentDate);
+    var reportDate=new Date();
     var reportDatestr=reportDate.toDateString();
+
+    /**get the last visted date from localStorage 
+     * report being highlighted on the next day
+    */
+    var lastvisitDate=this.localStorage.getItem('last_visit');
+    if(lastvisitDate!==currentDateStr) this.localStorage.removeItem('report_read');
 
     if(currentDateStr===reportDatestr){
         var isread=this.localStorage.getItem('report_read');
@@ -22,7 +28,8 @@ window.addEventListener('DOMContentLoaded',function(){
     daily_report.addEventListener('click',function(){
         daily_report.classList.remove('highlight');
         localStorage.setItem('report_read',true);
-    })
+    });
+    this.localStorage.setItem('last_visit',currentDateStr);
 
 
 })
