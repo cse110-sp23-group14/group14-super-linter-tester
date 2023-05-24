@@ -1,7 +1,8 @@
 /**
  * Retrieves the stored name from local storage and displays it on the page.
  */
-if (localStorage.getItem('name') === null) {
+
+if (!localStorage.hasOwnProperty('name')) {
     document.getElementById('name-info').innerHTML = "We don't have your name yet.";
 } else {
     document.getElementById('name-info').innerHTML = `The name we have for you is ${localStorage.getItem('name')}.`;
@@ -10,7 +11,7 @@ if (localStorage.getItem('name') === null) {
 /**
  * Retrieves the stored birthday from local storage and displays it on the page.
  */
-if (localStorage.getItem('birthday') === null) {
+if (!localStorage.hasOwnProperty('name')) {
     document.getElementById('birthday-info').innerHTML = "We don't have your birthday yet.";
 } else {
     document.getElementById('birthday-info').innerHTML = `The birthday we have for you is ${localStorage.getItem('birthday')}.`;
@@ -24,12 +25,28 @@ function saveUserName() {
     localStorage.setItem('name', userName);
 }
 
-/**
- * Saves the string entered by the user as their birthday into local storage.
- */
+
 function saveBirthday() {
-    var Birthday = document.getElementById('birthday').value;
-    localStorage.setItem('birthday', Birthday);
+    var birthdayMonth = document.getElementById('birthday-month').value;
+    var birthdayDay = document.getElementById('birthday-day').value;
+    var birthday = birthdayMonth + '.' + birthdayDay;
+    localStorage.setItem('birthday', birthday);
+}
+
+function updateBirthdayDays() {
+    var monthSelect = document.getElementById('birthday-month');
+    var daySelect = document.getElementById('birthday-day');
+    var selectedMonth = parseInt(monthSelect.value);
+    var daysInMonth = new Date(2023, selectedMonth, 0).getDate(); // Get the number of days in the selected month
+
+    daySelect.innerHTML = ''; // Clear previous options
+
+    for (var i = 1; i <= daysInMonth; i++) {
+        var option = document.createElement('option');
+        option.value = i;
+        option.text = i;
+        daySelect.appendChild(option);
+    }
 }
 
 
@@ -53,3 +70,12 @@ function clearBirthday() {
 }
 const clearBirthdayButton = document.getElementById('clear-birthday-button');
 clearBirthdayButton.addEventListener('click', clearBirthday);
+
+
+function navigateToNewPage(){
+    window.location.href = "feedback.html";
+}
+
+function nagigateToProfile(){
+    window.location.href = "userprofile.html"
+}
