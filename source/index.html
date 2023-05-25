@@ -3,6 +3,7 @@
 
 <head>
   <title>Welcome to Zodiak</title>
+  <script src="homepage_nav.js"></script>
   <link rel="stylesheet" href="styles/home-style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,23 +17,25 @@
 <body>
   <!-- <button id="settings-button">Settings</button> -->
   <!-- <a class="button" id="settings-button" href="settings.html">Settings</a> -->
-  <div class="nav-container">
-    <a href ="#" class="navMenuButton"><i class="fa-solid fa-bars fa-2xl"></i></a>
-    <div class="nav-content navShow">
+  <div class="nav-container navHideBackground">
+    <a id="navMenuButton"><i class="fa-solid fa-bars fa-2xl"></i></a>
+    <div class="nav-content navHide">
       <div class="nav">
           <a href="#" class="option">
               <h1 class="report">Daily Report</h1>
           </a>
-          <div class="checker">
-              <a href="#" class="option">
-                  <h1 class="compatibility">Compatibility </h1>
-              </a>
-              <span class="subheading"> Zodiak</span>
-          </div>
-         
+          <a href="#" class="option">
+            <h1 class="compatibility">Compatibility </h1>
+          </a>
           <a href="#" class="option">
               <h1 class="explore">Explore</h1>
           </a>
+          <a href="#" class="option">
+              <h1 class="settings">Settings</h1>
+          </a>
+      </div>
+      <div class="subheading">
+        <p>Zodiak</p>
       </div>
     </div>
   </div>
@@ -84,7 +87,6 @@
       </p>
     </div>  
   </div>
-<<<<<<< Updated upstream
 
   <div class="text-box">
     <p>
@@ -99,9 +101,6 @@
   </div>
 
   <script src="index.js"></script>
-=======
-  <script src="home-script.js"></script>
->>>>>>> Stashed changes
 </body>
 
 </html>

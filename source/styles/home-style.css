@@ -1,6 +1,7 @@
 :root {
     --main-dark-color: #282525;
     --main-light-color: #EDEADC;
+    --main-blue-color: #4a73c2;
 }
 
 body {
@@ -13,15 +14,16 @@ body {
     flex-direction: row;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, linear-gradient(to right, #4a73c2,#752fac), transparent 0);
     background-size: 200% 100%;
-    background-position: right;
+    background-image: linear-gradient(to right, var(--main-blue-color) 50%, transparent 50%);
+    transition: background-position 1s;
 }
 
-.navMenuButton {
+#navMenuButton {
     margin: 2vw;
     align-self: center;
     color: var(--main-light-color);
+    cursor: pointer;
 }
 
 /*sidebar*/
@@ -40,12 +42,14 @@ body {
 .nav-content {
     padding-left: 10vw;
     display: flex;
+    flex-direction: row;
     align-items: center;
     height: 100%;
     width: 100%;
+    transition: opacity 1.3s;
 }
 
-.report, .compatibility, .explore {
+.nav h1 {
     margin: 10px; 
     font-size: 80px;
     color: #edeadc;
@@ -53,19 +57,15 @@ body {
     font-family: "Inter", sans-serif;
 }
 
-.checker {
-    display: flex;
-    align-items: baseline; 
+.nav {
+    flex-basis: 40vw;
 }
 
-/* zodiak */
-.subheading { 
-    font-family: "Lora",serif;
+.subheading {
+    font-family: "Lora", serif;
     font-style: italic;  
-    position:relative;
     font-size: xx-large;
-    color:#edeadc;
-    position: relative;
+    color: #edeadc;
 }
 
 .option {
@@ -78,8 +78,8 @@ body {
 }
 
 /* media queries */
-@media screen and (min-width:350px){
-    .report,.compatibility,.explore{
+@media screen and (min-width:350px) {
+    .report, .compatibility, .explore{
         margin:0;
         font-size: 50px;
     }
@@ -92,8 +92,8 @@ body {
     }
 
 }
-@media screen and (min-width:1000px)  {
-    .report,.compatibility,.explore{
+@media screen and (min-width:1000px) {
+    .nav h1 {
         margin:10;
         font-size: 80px;
     }
@@ -107,12 +107,21 @@ body {
 }
 
 .navHide {
-    visibility: hidden;
+    opacity: 0%;
+    transition: opacity 0.5s;
 }
 
 .navShow {
+    opacity: 100%;
+    transition: opacity 1s linear 0.2s;
+}
+
+.navHideBackground {
+    background-position: right;
+}
+
+.navShowBackground {
     background-position: left;
-    visibility: visible;
 }
 
 .site-contents {
