@@ -1,21 +1,41 @@
-/**
- * Retrieves the stored name from local storage and displays it on the page.
- */
+// Call the functions to display the stored name and birthday
+displayStoredName();
+displayStoredBirthday();
 
-if (!localStorage.hasOwnProperty('name')) {
-    document.getElementById('name-info').innerHTML = "We don't have your name yet.";
-} else {
-    document.getElementById('name-info').innerHTML = `The name we have for you is ${localStorage.getItem('name')}.`;
-}
 
 /**
- * Retrieves the stored birthday from local storage and displays it on the page.
+ * Displays the stored birthday information on the webpage.
+ * @function
+ * @returns {void}
  */
-if (!localStorage.hasOwnProperty('name')) {
-    document.getElementById('birthday-info').innerHTML = "We don't have your birthday yet.";
-} else {
-    document.getElementById('birthday-info').innerHTML = `The birthday we have for you is ${localStorage.getItem('birthday')}.`;
+function displayStoredBirthday() {
+    const birthdayInfoElement = document.getElementById('birthday-info');
+    const storedBirthday = localStorage.getItem('birthday');
+
+    if (storedBirthday) {
+        birthdayInfoElement.innerHTML = `The birthday we have for you is ${storedBirthday}.`;
+    } else {
+        birthdayInfoElement.innerHTML = "We don't have your birthday yet.";
+    }
 }
+
+
+/**
+ * Displays the stored name information on the webpage.
+ * @function
+ * @returns {void}
+ */
+function displayStoredName() {
+    const nameInfoElement = document.getElementById('name-info');
+    const storedName = localStorage.getItem('name');
+
+    if (storedName) {
+        nameInfoElement.innerHTML = `The name we have for you is ${storedName}.`;
+    } else {
+        nameInfoElement.innerHTML = "We don't have your name yet.";
+    }
+}
+
 
 /**
  * Saves the string entered by the user as their name into local storage.
