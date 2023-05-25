@@ -1,7 +1,9 @@
 # Configuration of codeclimate-Mantainability checks
 
-version: "2"         # required to adjust maintainability checks
+# required to adjust maintainability checks
+version: "2"
 
+# 10/10 basic Manatainability checks
 checks:
   argument-count:
     enabled: true
@@ -44,14 +46,14 @@ checks:
     config:
       threshold: null
 
-## extra check, we don't need them now
-# plugins:
-#   eslint:
-#     enabled: true
-#     channel: "eslint-6"
-#   rubocop:
-#     enabled: true
-#     channel: "rubocop-0-79"
+# plugin is extra check
+plugins:
+  # eslint offers linting, complexity analysis, 
+  # and style checking for EcmaScript/JavaScript code.
+  eslint:
+    enabled: true
+    channel: "stable"
+
 
 exclude_patterns:
 - "config/"
