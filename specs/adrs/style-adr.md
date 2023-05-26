@@ -55,3 +55,6 @@ Big questions
 	- Descriptive commit messages
 	- Say what you changed
 	- add concerns if any/ problems
+
+* Code Conventions
+	- Do not use var, utilize const and let where appropriate.
