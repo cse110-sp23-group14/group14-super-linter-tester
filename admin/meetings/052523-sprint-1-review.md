@@ -70,7 +70,7 @@ Nicholas:
 Wincy:
 - Worked on converting homepage from figma to html/css
 - figma design for compatibility checker on web/app
-- Started JavaScript
+- Started JavaScript function to highlight unread daily report
 
 Tim:
 - Worked on team page
