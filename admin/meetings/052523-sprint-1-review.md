@@ -39,8 +39,7 @@ Jim:
 - Finished the Zodiac Function to determine the zodiac of the user by retrieving their birthday
 - Working on Love compatibility function
 - Concerns: 
-    - need to find someone to work on the setting page 
-    - need to work on adding checker to check if the user inputs in the right format
+    - need to work on the setting page 
 
 Jisol:
 - researched the documentation format
@@ -71,20 +70,23 @@ Nicholas:
 Wincy:
 - Worked on converting homepage from figma to html/css
 - figma design for compatibility checker on web/app
+- Started JavaScript function to highlight unread daily report
 
 Tim:
 - Worked on team page
-- Worked on Figma: figuring out themes and layout for home page
-- Worked on flowchart for web page
+- Worked on Figma: figuring out themes and layout for home page and flowchart for web page
 - Worked on HTML/CSS: added text box
 - Worked on CI/CD: completing diagram, researching and (will be  implementing) GitHub super linter
-- Concerns: Lack of semantic HTML
+- Concerns: 
+    - Lack of semantic HTML
+    - CI/CD not pushing
 
 Christina:
 - Looked up some sample copy/pastable sharing messages from other apps like wordle
 - Wrote our sharable text for horoscope with emojis
 - Researched/wrote sample code to copy the sharable text to clipboard
 - CI/CD md file
+- Concerns: implementing the clipboard code for daily horoscope
 
 
 
