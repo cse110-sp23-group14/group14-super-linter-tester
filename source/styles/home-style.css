@@ -19,7 +19,7 @@ body {
     transition: background-position 1s;
 }
 
-#navMenuButton {
+#nav-button {
     margin: 2vw;
     align-self: center;
     color: var(--main-light-color);
@@ -49,12 +49,21 @@ body {
     transition: opacity 1.3s;
 }
 
+.nav a {
+    text-decoration: none;
+}
+
 .nav h1 {
     margin: 10px; 
     font-size: 80px;
     color: #edeadc;
     text-align: left;
+    font-weight: 200;
     font-family: "Inter", sans-serif;
+}
+
+.nav h1:hover {
+    color: var(--main-dark-color);
 }
 
 .nav {
@@ -106,21 +115,25 @@ body {
     } 
 }
 
-.navHide {
+.icon-hide {
+    display: none !important;
+}
+
+.nav-hide {
     opacity: 0%;
     transition: opacity 0.5s;
 }
 
-.navShow {
+.nav-show {
     opacity: 100%;
     transition: opacity 1s linear 0.2s;
 }
 
-.navHideBackground {
+.nav-background-hide {
     background-position: right;
 }
 
-.navShowBackground {
+.nav-showBackground {
     background-position: left;
 }
 
