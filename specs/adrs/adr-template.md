@@ -1,17 +1,22 @@
-# Use Plain JUnit5 for advanced test assertions
+# Architectural Decision Record: Topic
 
 ## Context and Problem Statement
 
-How to write readable test assertions?
-How to write readable test assertions for advanced tests?
+- Write here the problem
 
 ## Considered Options
 
-* Plain JUnit5
-* Hamcrest
-* AssertJ
+* Option 1
+* Option 2
+* Option 3
+* Option 4
 
-## Decision Outcome
+## Current Decision Outcome: Outcome (Date)
 
-Chosen option: "Plain JUnit5", because it is a standard framework and the features of the other frameworks do not outweigh the drawbrack of adding a new dependency.
+- Write outcome hereA
 
+## History of Decisions (for if major pivots made not refinements)
+
+### Reasoning
+
+## Discussion Notes
