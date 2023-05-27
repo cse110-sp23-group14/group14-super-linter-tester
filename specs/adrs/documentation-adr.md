@@ -20,7 +20,7 @@
 * Project Planning tools like Atlassian Jira
 * ADR wiki such as MediaWiki
 
-## Current Decision Outcomes: Chose JSDocs for Documentation
+## Current Decision Outcomes: Chose JSDocs for Documentation (5/25/23)
 
 - JSDocs for code documentation
 - FAQ page for user documentation
@@ -32,12 +32,12 @@
 
 ### History of Decisions (ordered chronologically):
 
-- Markdown files + FAQs
+- Markdown files + FAQs (05/07)
 	- Realized we were making more work for ourselves
 	- Easier to just document once (using code comments)
 	- Using JSDoc didn't look as difficult as before
 	- Pivoted
-- JSDoc + FAQs
+- JSDoc + FAQs (05/20)
 
 ## Discussion Notes
 
