@@ -13,7 +13,7 @@
 
 ## Current Decision Outcome: Outcome (Date)
 
-- Write outcome hereA
+- Write outcome here
 
 ## History of Decisions (for if major pivots made not refinements)
 
