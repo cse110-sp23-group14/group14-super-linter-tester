@@ -83,37 +83,10 @@ body {
 
 /* highlight new daily report*/
 .highlight {
-    color:#FEBD38;
+    color: #FEBD38 !important;
 }
 
-/* media queries */
-@media screen and (min-width:350px) {
-    .report, .compatibility, .explore{
-        margin:0;
-        font-size: 50px;
-    }
-    .close-symbol{
-        margin-right: 10px;
-    }
-    .subheading{
-        margin-left:20px;
-        font-size: medium;
-    }
 
-}
-@media screen and (min-width:1000px) {
-    .nav h1 {
-        margin:10;
-        font-size: 80px;
-    }
-    .close-symbol{
-        margin-right: 90px;
-    }
-    .subheading{
-        margin-left: 300px;
-        font-size: xx-large;
-    } 
-}
 
 .icon-hide {
     display: none !important;
@@ -276,3 +249,36 @@ body {
     overflow: auto;
     font-family: 'Roboto-monospace', monospace;
 }
+
+/**
+*
+* media queries 
+@media screen and (min-width:350px) {
+    .report, .compatibility, .explore{
+        margin:0;
+        font-size: 50px;
+    }
+    .close-symbol{
+        margin-right: 10px;
+    }
+    .subheading{
+        margin-left:20px;
+        font-size: medium;
+    }
+
+}
+@media screen and (min-width:1000px) {
+    .nav h1 {
+        margin:10;
+        font-size: 80px;
+    }
+    .close-symbol{
+        margin-right: 90px;
+    }
+    .subheading{
+        margin-left: 300px;
+        font-size: xx-large;
+    } 
+}
+
+*/

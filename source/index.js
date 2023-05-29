@@ -6,7 +6,16 @@
  * Use localStorage to indicate if report has been read or not.
  */
 window.addEventListener('DOMContentLoaded', function() {
+
+    const navButton = document.getElementById('nav-button');
+    const navMenu = document.getElementsByClassName('nav-content')[0];
+    const navIconBars = document.getElementsByClassName('fa-bars')[0];
+    const navIconXMark = document.getElementsByClassName('fa-xmark')[0];
+    const navContainer = document.getElementsByClassName('nav-container')[0];
+    let isNavOpen = false;
+
     const dailyReport = document.querySelector('.report');
+
 
     const currentDate = new Date();
     const currentDateStr = currentDate.toDateString();
@@ -19,29 +28,7 @@ window.addEventListener('DOMContentLoaded', function() {
      * report being highlighted on the next day
     */
     const lastVisitDate = localStorage.getItem('last_visit');
-    if (lastVisitDate != currentDateStr) {
-        localStorage.removeItem('report_read');
-    };
 
-    if (currentDateStr == reportDateStr) {
-        const isRead = this.localStorage.getItem('report_read');
-        if(!isRead) {
-            dailyReport.classList.add('highlight');
-        }
-    }
-   
-    dailyReport.addEventListener('click', function() {
-        dailyReport.classList.remove('highlight');
-        localStorage.setItem('report_read', true);
-    });
-    localStorage.setItem('last_visit', currentDateStr);
-
-    const navButton = document.getElementById('nav-button');
-    const navMenu = document.getElementsByClassName('nav-content')[0];
-    const navIconBars = document.getElementsByClassName('fa-bars')[0];
-    const navIconXMark = document.getElementsByClassName('fa-xmark')[0];
-    const navContainer = document.getElementsByClassName('nav-container')[0];
-    let isNavOpen = false;
     navButton.addEventListener('click', (event) => {
         if (isNavOpen)
         {
@@ -63,6 +50,28 @@ window.addEventListener('DOMContentLoaded', function() {
             navIconXMark.classList.remove('icon-hide');
             navContainer.classList.add('nav-showBackground');
             navContainer.classList.remove('nav-background-hide');
+
+           
         }
+
+        if (lastVisitDate !== currentDateStr) {
+            localStorage.removeItem('report_read');
+         
+        };
+    
+        if (currentDateStr === reportDateStr) {
+            const isRead =localStorage.getItem('report_read');
+            if(!isRead) {
+                dailyReport.classList.add('highlight');
+             
+            }
+        }
+       
+        dailyReport.addEventListener('click', function() {
+            dailyReport.classList.remove('highlight');
+            localStorage.setItem('report_read', true);
+        });
+        localStorage.setItem('last_visit', currentDateStr);
+    
     });
 });
