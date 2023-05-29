@@ -26,6 +26,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          ref: main
       #Adds the test-8ball-PWA branch to the pages
       - uses: actions/checkout@v3
         with:
