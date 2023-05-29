@@ -40,7 +40,7 @@ function getLoveCompatibility(leftSign, rightSign) {
         "Aries": { compatible: ["Libra","Sagittarius"], score: "POSITIVE"},
         "Aries": {compatible:["Scoprio"],score: "NEGATIVE"},
 
-        "Taurus": { compatible: ["Aries","Cancer","Libra","Scoprio","Capricorn"]}
+        "Taurus": { compatible: ["Aries","Cancer","Libra","Scoprio","Capricorn"]},
         "Taurus": { compatible: ["Virgo", "Capricorn"], score: 85 },
         "Gemini": { compatible: ["Libra", "Aquarius"], score: 70 },
         "Cancer": { compatible: ["Scorpio", "Pisces"], score: 75 },
