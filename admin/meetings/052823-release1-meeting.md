@@ -28,3 +28,31 @@
 	- Add more stages to the CI/CD pipeline
 	- General repo cleaning
 		* Some files have disappeared
+
+## Notes
+
+Varun:
+- Worked on fixing CI/CD 
+
+Tim:
+- CI/CD: implemented super linter
+
+Melody:
+- Horoscope function design
+- negative/neutral messages
+
+Jim:
+- finished birthday function
+- love compatability of zodiac
+
+Mary:
+- Daily horoscope
+
+### Refector Set up:
+
+1. Structural changes
+2. Renaming within a file
+	- Review Style ADR
+3. Comments in files
+4. Folder organization
+5. Changing names of files
