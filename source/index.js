@@ -1,11 +1,9 @@
 /**
- * Make the daily report highlighted.
- * Highlight will be removed after the user has read it.
- * It will be highlighted again on the next day (if the current date matches the report date).
- * Report will only be highlighted once per day until it is read by the user.
- * Use localStorage to indicate if report has been read or not.
+ * Event listener function for the 'DOMContentLoaded' event.
+ * 
+ * @param {Event} event -The 'DOMContentLoaded' event object
  */
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', (event)=> {
 
     const navButton = document.getElementById('nav-button');
     const navMenu = document.getElementsByClassName('nav-content')[0];
@@ -16,8 +14,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
     const dailyReport = document.querySelector('.report');
 
-
-
+    /**
+    * Event listener function for the 'click' event on the navButton.
+    * 
+    * @param {Event} event -The 'click' event object
+    */
     navButton.addEventListener('click', (event) => {
         if (isNavOpen)
         {
