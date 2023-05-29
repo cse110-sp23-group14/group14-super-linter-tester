@@ -17,17 +17,6 @@ window.addEventListener('DOMContentLoaded', function() {
     const dailyReport = document.querySelector('.report');
 
 
-    const currentDate = new Date();
-    const currentDateStr = currentDate.toDateString();
-
-    const reportDate = new Date();
-    const reportDateStr = reportDate.toDateString();
-
-    /**
-     * get the last visted date from localStorage 
-     * report being highlighted on the next day
-    */
-    const lastVisitDate = localStorage.getItem('last_visit');
 
     navButton.addEventListener('click', (event) => {
         if (isNavOpen)
@@ -53,6 +42,17 @@ window.addEventListener('DOMContentLoaded', function() {
 
            
         }
+        const currentDate = new Date();
+        const currentDateStr = currentDate.toDateString();
+    
+        const reportDate = new Date();
+        const reportDateStr = reportDate.toDateString();
+    
+        /**
+         * get the last visted date from localStorage 
+         * report being highlighted on the next day
+        */
+        const lastVisitDate = localStorage.getItem('last_visit');
 
         if (lastVisitDate !== currentDateStr) {
             localStorage.removeItem('report_read');
