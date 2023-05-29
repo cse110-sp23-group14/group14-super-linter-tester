@@ -188,8 +188,8 @@ body {
     border: 2px solid #8c67b1;
     border-radius: 50px;
     text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
+    /* cursor: pointer;
+    transition: all 0.3s ease-out; */
 }
 
 .button:hover {
@@ -212,20 +212,21 @@ body {
     visibility: visible;
     opacity: 1;
 }
-  
+
 .popup {
     margin: 70px auto;
     padding: 20px;
-    background: #fff;
+    background: var(--main-light-color);
     border-radius: 5px;
-    width: 40%;
+    width: 30%;
     position: relative;
-    transition: all 5s ease-in-out;
+    /* transition: all 5s ease-in-out; */
 }
-  
+
 .popup h2 {
-    margin-top: 0;
-    color: #333;
+    /* margin-top: 0; */
+    text-align: center;
+    color: var(--main-dark-color);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -233,19 +234,37 @@ body {
     position: absolute;
     top: 20px;
     right: 30px;
-    transition: all 200ms;
+    /* transition: all 200ms; */
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
-    color: #333;
+    color: var(--main-dark-color);
 }
 
 .popup .close:hover {
     color: #8c67b1;
 }
 
-.popup .content {
-    max-height: 30%;
+.popup .daily-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.popup .daily-title {
+    text-align: center;
+    color: var(--main-dark-color);
+}
+
+.popup .daily-date {
+    text-align: center;
+}
+
+.popup .daily-content {
+    /* max-height: 30%; */
+    margin-left: 6%;
+    margin-right: 6%;
     overflow: auto;
     font-family: 'Roboto-monospace', monospace;
 }
