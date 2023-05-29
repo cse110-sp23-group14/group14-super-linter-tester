@@ -1,0 +1,12 @@
+{
+    "positive": {
+        "0": "Today you will have a great day.",
+        "1": "You will find something lost."
+    },
+    "neutral": {
+        "0": "Today you will have a terrible day."
+    },
+    "negative": {
+        "0": "Today you will have an alright day."
+    }
+}
