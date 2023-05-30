@@ -3,6 +3,14 @@
 5/28/23 Zoom
 
 ## Attendees:
+- Jisol
+- Luke
+- Varun
+- Tim
+- Melody
+- Mary
+- Wincy
+- Jim
 
 ## Agenda: 
 
