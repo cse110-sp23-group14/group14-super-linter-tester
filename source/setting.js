@@ -1,7 +1,10 @@
+import { getZodiacSign, readZodiacData } from "./zodiac";
+
 window.addEventListener('DOMContentLoaded', (event) => {
     // Call the functions to display the stored name and birthday
     displayStoredName();
     displayStoredBirthday();
+    displayZodiac();
 
     const clearNameButton = document.getElementById('clear-name-button');
     clearNameButton.addEventListener('click', clearName);
@@ -42,6 +45,16 @@ function displayStoredName() {
     }
 }
 
+function displayZodiac() {
+    const zodiacInfoElement = document.getElementById('zodiac-text');
+    const storedBirthday = localStorage.getItem('birthday');
+    const zodiacArray = readZodiacData('zodiac.js');
+
+    const zodiacSign = getZodiacSign(storedBirthday.split('.')[0], storedBirthday.split('.')[1], zodiacArray);
+    if (zodiacSign) {
+        zodiacInfoElement.innerHTML = zodiacSign;
+    }
+}
 
 /**
  * Saves the string entered by the user as their name into local storage.
