@@ -3,7 +3,7 @@
  * @param {string} filePath - Path to the JSON file.
  * @returns {object} - Parsed JSON data.
  */
-function readZodiacData(filePath) {
+function readJsonData(filePath) {
     const fs = require('fs');
     const jsonData = fs.readFileSync(filePath, 'utf-8');
     return JSON.parse(jsonData);
@@ -46,7 +46,7 @@ function getCompatibility(zodiacSign1, zodiacSign2, compatibilityData) {
 }
 
 // Example usage
-const zodiacData = readZodiacData('zodiac.json');
+const zodiacData = readJsonData('zodiac.json');
 const zodiacSigns = zodiacData.ZodiacSigns;
 const compatibilityData = zodiacData.Compatibility;
 
@@ -57,6 +57,6 @@ console.log(compatibility); // Output: "OK"
 
 // Export functions for horoscope.js
 module.exports = {
-  readZodiacData,
+  readJsonData,
   getZodiacSign,
 };

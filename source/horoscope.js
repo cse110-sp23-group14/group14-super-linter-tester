@@ -1,28 +1,41 @@
 const t = require('./zodiac')
 
-/**
- * Read the JSON data from the given file path.
- * @param {string} filePath - Path to the JSON file.
- * @returns {object} - Parsed JSON data.
- */
+const 
+/*
+ *Read the JSON data from the given file path.
+ *@param {string} filePath - Path to the JSON file.
+ *@returns {object} - Parsed JSON data.
+ 
 function readHoroscopeData(filePath) {
   const fs = require('fs');
   const jsonData = fs.readFileSync(filePath, 'utf-8');
   return JSON.parse(jsonData);
-}
+}*/
 
 /**
  * Finds user's sign and current date and returns an appropriate horoscope.
  * @returns {string} A horoscope in string form.
  */
 function generateHoroscope() {
+  // Getting Birthday Data
   let birthday = localStorage.getItem('birthday');
   let birthdaySplit = birthday.split(".");
 
-  const zodiacData = readZodiacData('zodiac.json');
+  // Getting Zodiac sign data
+  const zodiacData = readJsonData('zodiac.json');
   const zodiacSigns = zodiacData.ZodiacSigns;
   let sign = getZodiacSign(birthdaySplit[0], birthdaySplit[1], zodiacSigns);
-  return "I love astrology!";
+  
+  
+
+  // Getting Date for hashing function
+  const date = new Date();
+  const day = date.getDate();
+  const month = date.getMonth();
+  let stringInputToHash = "" + day + month;
+  let inputToHash = Number(stringInputToHash);
+  const hashValue = inputToHash % ;
+
 }
 
 /**
