@@ -5,6 +5,7 @@
 }
 
 body {
+    height: 100%;
     margin: 0;
 }
 
@@ -17,9 +18,11 @@ body {
     background-size: 200% 100%;
     background-image: linear-gradient(to right, var(--main-blue-color) 50%, transparent 50%);
     transition: background-position 1s;
+    pointer-events: none;
 }
 
 #nav-button {
+    pointer-events: all;
     margin: 2vw;
     align-self: center;
     color: var(--main-light-color);
@@ -47,10 +50,12 @@ body {
     height: 100%;
     width: 100%;
     transition: opacity 1.3s;
+    transition: visibility 0s;
 }
 
 .nav a {
     text-decoration: none;
+    pointer-events: all;
 }
 
 .nav h1 {
@@ -86,18 +91,18 @@ body {
     color: #FEBD38 !important;
 }
 
-
-
 .icon-hide {
     display: none !important;
 }
 
 .nav-hide {
+    visibility: hidden;
     opacity: 0%;
     transition: opacity 0.5s;
 }
 
 .nav-show {
+    visibility: visible;
     opacity: 100%;
     transition: opacity 1s linear 0.2s;
 }
@@ -110,7 +115,7 @@ body {
     background-position: left;
 }
 
-.site-contents {
+.site-content {
     display: flex;
     flex-direction: column;
 }

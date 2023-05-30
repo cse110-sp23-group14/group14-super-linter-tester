@@ -1,7 +1,13 @@
-// Call the functions to display the stored name and birthday
-displayStoredName();
-displayStoredBirthday();
+window.addEventListener('DOMContentLoaded', (event) => {
+    // Call the functions to display the stored name and birthday
+    displayStoredName();
+    displayStoredBirthday();
 
+    const clearNameButton = document.getElementById('clear-name-button');
+    clearNameButton.addEventListener('click', clearName);
+    const clearBirthdayButton = document.getElementById('clear-birthday-button');
+    clearBirthdayButton.addEventListener('click', clearBirthday);
+})
 
 /**
  * Displays the stored birthday information on the webpage.
@@ -9,13 +15,13 @@ displayStoredBirthday();
  * @returns {void}
  */
 function displayStoredBirthday() {
-    const birthdayInfoElement = document.getElementById('birthday-info');
+    const birthdayInfoElement = document.getElementById('birthday-text');
     const storedBirthday = localStorage.getItem('birthday');
 
     if (storedBirthday) {
         birthdayInfoElement.innerHTML = `The birthday we have for you is ${storedBirthday}.`;
     } else {
-        birthdayInfoElement.innerHTML = "We don't have your birthday yet.";
+        birthdayInfoElement.innerHTML = "We don't have your <span class='highlight'>birth date</span> yet!";
     }
 }
 
@@ -26,13 +32,13 @@ function displayStoredBirthday() {
  * @returns {void}
  */
 function displayStoredName() {
-    const nameInfoElement = document.getElementById('name-info');
+    const nameInfoElement = document.getElementById('name-text');
     const storedName = localStorage.getItem('name');
 
     if (storedName) {
         nameInfoElement.innerHTML = `The name we have for you is ${storedName}.`;
     } else {
-        nameInfoElement.innerHTML = "We don't have your name yet.";
+        nameInfoElement.innerHTML = "We don't have your <span class='highlight'>name</span> yet!";
     }
 }
 
@@ -77,9 +83,6 @@ function clearName() {
     localStorage.removeItem('name');
     location.reload(); // Refresh the page
 }
-const clearNameButton = document.getElementById('clear-name-button');
-clearNameButton.addEventListener('click', clearName);
-
 
 /**
  * Clears the stored birthday from local storage and refreshes the page.
@@ -88,9 +91,6 @@ function clearBirthday() {
     localStorage.removeItem('birthday');
     location.reload(); // Refresh the page
 }
-const clearBirthdayButton = document.getElementById('clear-birthday-button');
-clearBirthdayButton.addEventListener('click', clearBirthday);
-
 
 function navigateToNewPage(){
     window.location.href = "feedback.html";

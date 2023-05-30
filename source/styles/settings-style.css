@@ -1,0 +1,39 @@
+.settings-content {
+    padding-left: 6%;
+    padding-right: 5%;
+    background-color: var(--main-dark-color);
+    height: 100vh;
+    color: var(--main-light-color);
+}
+
+span.highlight {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.settings-content h1 {
+    font: 64px 'Lora', serif;
+}
+
+.settings-content h2 {
+    margin-top: 0;
+    font: 48px 'Inter', sans-serif;
+}
+
+.settings-content p {
+    font: 24px 'Inter', sans-serif;
+}
+
+.divider {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    background-color: var(--main-light-color);
+    height: 0.5vh;
+    text-align: center;
+}
+
+.edit-button {
+    height: 32px;
+    float: right;
+    color: var(--main-light-color);
+}
