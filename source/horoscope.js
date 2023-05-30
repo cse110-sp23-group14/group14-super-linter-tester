@@ -20,12 +20,8 @@ function generateHoroscope() {
   let birthdaySplit = birthday.split(".");
 
   // Getting Zodiac sign data
-  const zodiacData = readJsonData('zodiac.json');
-  const zodiacSigns = zodiacData.ZodiacSigns;
-  let sign = getZodiacSign(birthdaySplit[0], birthdaySplit[1], zodiacSigns);
+  let sign = getZodiacSign(birthdaySplit[0], birthdaySplit[1]);
   
-  
-
   // Getting Date for hashing function
   const date = new Date();
   const day = date.getDate();
