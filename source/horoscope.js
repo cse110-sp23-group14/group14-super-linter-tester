@@ -1,6 +1,4 @@
 const t = require('./zodiac')
-
-const 
 /*
  *Read the JSON data from the given file path.
  *@param {string} filePath - Path to the JSON file.
@@ -34,7 +32,7 @@ function generateHoroscope() {
   const month = date.getMonth();
   let stringInputToHash = "" + day + month;
   let inputToHash = Number(stringInputToHash);
-  const hashValue = inputToHash % ;
+  const hashValue = inputToHash % 13;
 
 }
 
