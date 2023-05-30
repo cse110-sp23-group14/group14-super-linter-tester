@@ -5,6 +5,11 @@
     /* 0C134F 1D267D 5C469C D4ADFC */
 }
 
+html{
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
+}
+
 body {
     height: 100%;
     margin: 0;
@@ -119,6 +124,7 @@ body {
 .site-content {
     display: flex;
     flex-direction: column;
+    scroll-snap-align: center;
 }
 
 .title-box {
