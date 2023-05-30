@@ -1,3 +1,4 @@
+
 /**
  * Event listener function for the 'DOMContentLoaded' event.
  * 
@@ -74,4 +75,6 @@ window.addEventListener('DOMContentLoaded', (event)=> {
         localStorage.setItem('last_visit', currentDateStr);
     
     });
+
+    
 });
