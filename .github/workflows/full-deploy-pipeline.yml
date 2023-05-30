@@ -8,6 +8,8 @@ permissions:
     id-token: write
     
 jobs:
+    linting:
+        uses: ./.github/workflows/linter.yml
     testing:
         uses: ./.github/workflows/testing.yml
     documentation:
