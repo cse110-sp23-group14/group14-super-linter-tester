@@ -21,6 +21,7 @@ jobs:
         uses: andstor/jsdoc-action@v1
         with:
           source_dir: main/fortune-telling-dev/source
+          publish_branch: documentation
           output_dir: ./out
           template: minami
           front_page: README.md
