@@ -17,7 +17,7 @@ function readJsonData(filePath) {
    * @returns {string|null} - Zodiac sign name or null if not found.
    */
   function getZodiacSign(month, day) {
-    const zodiacData = readJsonData('zodiac.json');
+    const zodiacData = readJsonData('./zodiac.json');
     const zodiacSigns = zodiacData.ZodiacSigns;
     for (const sign of zodiacSigns) {
       if (
@@ -51,11 +51,6 @@ function readJsonData(filePath) {
     return "UNKNOWN";
   }
   
-  // Example usage
-  const zodiacData = readJsonData('zodiac.json');
-  
-  const zodiacSigns = zodiacData.ZodiacSigns;
-  const compatibilityData = zodiacData.Compatibility;
   
   const zodiacSign1 = getZodiacSign(7, 23); // Leo
   const zodiacSign2 = getZodiacSign(9, 23); // Virgo
