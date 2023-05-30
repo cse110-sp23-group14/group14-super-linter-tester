@@ -17,7 +17,6 @@ function readZodiacData(filePath) {
    * @returns {string|null} - Zodiac sign name or null if not found.
    */
   function getZodiacSign(month, day) {
-    
     const zodiacData = readZodiacData('zodiac.json');
     const zodiacSigns = zodiacData.ZodiacSigns;
     for (const sign of zodiacSigns) {
