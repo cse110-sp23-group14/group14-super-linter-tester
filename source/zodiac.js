@@ -3,9 +3,9 @@
  * @param {string} filePath - Path to the JSON file.
  * @returns {object} - Parsed JSON data.
  */
-function readZodiacData(filePath) {
-  const fs = require('fs');
-  const jsonData = fs.readFileSync(filePath, 'utf-8');
+function readJsonData(filePath) {
+  const files = require('fs');
+  const jsonData = files.readFileSync(filePath, 'utf-8');
   return JSON.parse(jsonData);
 }
   
@@ -17,7 +17,7 @@ function readZodiacData(filePath) {
    * @returns {string|null} - Zodiac sign name or null if not found.
    */
   function getZodiacSign(month, day) {
-    const zodiacData = readZodiacData('zodiac.json');
+    const zodiacData = readJsonData('zodiac.json');
     const zodiacSigns = zodiacData.ZodiacSigns;
     for (const sign of zodiacSigns) {
       if (
@@ -38,7 +38,7 @@ function readZodiacData(filePath) {
    * @returns {string} - Compatibility status ("OK" or "UNKNOWN").
    */
   function getCompatibility(zodiacSign1, zodiacSign2) {
-    const zodiacData = readZodiacData('zodiac.json');
+    const zodiacData = readJsonData('zodiac.json');
   
   
   const compatibilityData = zodiacData.Compatibility;
@@ -52,7 +52,7 @@ function readZodiacData(filePath) {
   }
   
   // Example usage
-  const zodiacData = readZodiacData('zodiac.json');
+  const zodiacData = readJsonData('zodiac.json');
   
   const zodiacSigns = zodiacData.ZodiacSigns;
   const compatibilityData = zodiacData.Compatibility;

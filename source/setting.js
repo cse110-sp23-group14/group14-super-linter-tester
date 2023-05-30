@@ -1,4 +1,4 @@
-import { getZodiacSign, readZodiacData } from "./zodiac";
+import { getZodiacSign, readJsonData } from "./zodiac";
 
 window.addEventListener('DOMContentLoaded', (event) => {
     // Call the functions to display the stored name and birthday
@@ -48,7 +48,7 @@ function displayStoredName() {
 function displayZodiac() {
     const zodiacInfoElement = document.getElementById('zodiac-text');
     const storedBirthday = localStorage.getItem('birthday');
-    const zodiacArray = readZodiacData('zodiac.js');
+    const zodiacArray = readJsonData('zodiac.js');
 
     const zodiacSign = getZodiacSign(storedBirthday.split('.')[0], storedBirthday.split('.')[1], zodiacArray);
     if (zodiacSign) {
