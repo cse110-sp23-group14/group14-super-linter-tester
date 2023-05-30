@@ -1,3 +1,4 @@
+
 /**
  * Event listener function for the 'DOMContentLoaded' event.
  * 
@@ -64,7 +65,6 @@ window.addEventListener('DOMContentLoaded', (event)=> {
             const isRead =localStorage.getItem('report_read');
             if(!isRead) {
                 dailyReport.classList.add('highlight');
-             
             }
         }
        
@@ -75,4 +75,6 @@ window.addEventListener('DOMContentLoaded', (event)=> {
         localStorage.setItem('last_visit', currentDateStr);
     
     });
+
+    
 });
