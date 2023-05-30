@@ -3,7 +3,7 @@ const {
   readJsonData,
   getZodiacSign,
   getCompatibility
-} = require('./zodiac.js');
+} = require('source/zodiac.js');
 
 // Mock the fs.readFileSync function
 jest.mock('fs');
