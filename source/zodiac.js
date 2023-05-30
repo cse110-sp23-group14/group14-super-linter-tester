@@ -4,10 +4,10 @@
  * @returns {object} - Parsed JSON data.
  */
 function readZodiacData(filePath) {
-    const fs = require('fs');
-    const jsonData = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(jsonData);
-  }
+  const fs = require('fs');
+  const jsonData = fs.readFileSync(filePath, 'utf-8');
+  return JSON.parse(jsonData);
+}
   
   /**
    * Get the zodiac sign based on the given month and day.
