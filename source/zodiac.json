@@ -157,8 +157,8 @@
             "Sagittarius": "NEGATIVE"
           }
     },
-    "zodiacSigns": [
-        {
+    "ZodiacSigns": [
+      {
           "name": "Aquarius",
           "startMonth": 1,
           "startDay": 20,
