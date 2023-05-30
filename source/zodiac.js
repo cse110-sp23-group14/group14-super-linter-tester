@@ -1,3 +1,5 @@
+module.exports = {readJsonData,getZodiacSign, getCompatibility};
+
 /**
  * Read the JSON data from the given file path.
  * @param {string} filePath - Path to the JSON file.
@@ -17,7 +19,7 @@ function readJsonData(filePath) {
    * @returns {string|null} - Zodiac sign name or null if not found.
    */
   function getZodiacSign(month, day) {
-    const zodiacData = readJsonData('./zodiac.json');
+    const zodiacData = readJsonData('source/zodiac.json');
     const zodiacSigns = zodiacData.ZodiacSigns;
     for (const sign of zodiacSigns) {
       if (
@@ -38,7 +40,7 @@ function readJsonData(filePath) {
    * @returns {string} - Compatibility status ("OK" or "UNKNOWN").
    */
   function getCompatibility(zodiacSign1, zodiacSign2) {
-    const zodiacData = readJsonData('zodiac.json');
+    const zodiacData = readJsonData('source/zodiac.json');
   
   
   const compatibilityData = zodiacData.Compatibility;
@@ -52,8 +54,8 @@ function readJsonData(filePath) {
   }
   
   
-  const zodiacSign1 = getZodiacSign(7, 23); // Leo
-  const zodiacSign2 = getZodiacSign(9, 23); // Virgo
-  const compatibility = getCompatibility(zodiacSign1, zodiacSign2);
-  console.log(compatibility); // Output: "OK"
-  console.log(zodiacSign1); // Output: "OK"
+  // const zodiacSign1 = getZodiacSign(7, 23); // Leo
+  // const zodiacSign2 = getZodiacSign(9, 23); // Virgo
+  // const compatibility = getCompatibility(zodiacSign1, zodiacSign2);
+  // console.log(compatibility); // Output: "OK"
+  // console.log(zodiacSign1); // Output: "OK"

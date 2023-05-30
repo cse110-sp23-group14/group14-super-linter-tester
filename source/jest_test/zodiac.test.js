@@ -3,32 +3,34 @@ const {
   readJsonData,
   getZodiacSign,
   getCompatibility
-} = require('source/zodiac.js');
+} = require('../zodiac.js');
+
+//console.log(getZodiacSign);
 
 // Mock the fs.readFileSync function
-jest.mock('fs');
-fs.readFileSync.mockReturnValue('{"ZodiacSigns": [], "Compatibility": {}}');
+// jest.mock('fs');
+// fs.readFileSync.mockReturnValue('{"ZodiacSigns": [], "Compatibility": {}}');
 
 describe('getZodiacSign', () => {
   
     it('should return the correct zodiac sign for a given month and day within the range', () => {
-      const zodiacSign = getZodiacSign(4, 3, zodiacSigns);
+      const zodiacSign = getZodiacSign(4, 3);
       expect(zodiacSign).toBe('Aries');
     });
   
     it('should return the correct zodiac sign for a given month and day at the start range', () => {
-      const zodiacSign = getZodiacSign(4, 19, zodiacSigns);
+      const zodiacSign = getZodiacSign(4, 19);
       expect(zodiacSign).toBe('Aries');
     });
   
     it('should return the correct zodiac sign for a given month and day at the end range', () => {
-      const zodiacSign = getZodiacSign(5, 20, zodiacSigns);
+      const zodiacSign = getZodiacSign(5, 20);
       expect(zodiacSign).toBe('Taurus');
     });
   
     it('should return null if no zodiac sign is found for the given month and day', () => {
-      const zodiacSign = getZodiacSign(2, 15, zodiacSigns);
-      expect(zodiacSign).toBeNull();
+      const zodiacSign = getZodiacSign(2, 15);
+      expect(zodiacSign).toBe('Aquarius');
     });
 });
 
