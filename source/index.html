@@ -7,6 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles/home-style.css">
+  <script src="setting.js"></script>
+  <link rel="stylesheet" href="styles/settings-style.css">
   <script src="scripts/index.js"></script>
   <script src="https://kit.fontawesome.com/ec9b6ab711.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
@@ -105,7 +107,63 @@
       Vehicula at commodo aliquam nisi tellus dolor tortor urna. Duis aliquet arcu.
     </p>
   </div>
+  <div class="site-content settings-content">
+    <h1>Settings</h1>
+    <div class="user-profile">
+        <h2>User Profile</h2>
+        <p id="name-text">We don't have your <span class="highlight">name</span> yet!</p>
+        <p id="zodiac-text"></p>
+        <p id="birthday-text">We don't have your <span class="highlight">birth date</span> yet!</p>
+        <a href="#user-edit-popup" class="edit-button"><i class="fa-solid fa-pen-to-square fa-2xl"></i></a>
+    </div>
+    <span class="divider"></span>
+    <div class="horoscope-preferences">
+        <h2>Horoscope Preferences</h2>
+        <p id="time-zone-text">We don't know your <span class="highlight">time zone</span> yet!</p>
+        <a class="edit-button"><i class="fa-solid fa-pen-to-square fa-2xl"></i></a>
+    </div>
+</div>
+<div id="user-edit-popup" class="overlay">
+    <div class="popup">
+      <h2>Edit User Profile</h2>
+      <a class="close" href="#">&times;</a>
+      <div id="change-name">
+        <form onsubmit="saveUserName()">
+            <label for="name">Change name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <input type="submit" value="Submit">
+        </form> 
+    </div>
+    <button id="clear-name-button">Clear Name</button>
+    <br>
 
+    <div id="birthday-info"></div><br>
+    
+    <div id="change-birthday">
+        <form onsubmit="saveBirthday()">
+            <label for="birthday-month">Change birthday:</label><br>
+        <select id="birthday-month" name="birthday-month" onchange="updateBirthdayDays()">
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+        <select id="birthday-day" name="birthday-day"></select>
+        <input type="submit" value="Submit">
+        </form> 
+    </div>
+    <button id="clear-birthday-button" onclick="clearBirthday()">Clear Birthday</button>
+    </div>
+  </div>
+  </body>
  
 </body>
 

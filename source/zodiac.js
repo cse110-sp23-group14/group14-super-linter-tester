@@ -3,11 +3,11 @@
  * @param {string} filePath - Path to the JSON file.
  * @returns {object} - Parsed JSON data.
  */
-function readJsonData(filePath) {
-    const fs = require('fs');
-    const jsonData = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(jsonData);
-  }
+function readZodiacData(filePath) {
+  const fs = require('fs');
+  const jsonData = fs.readFileSync(filePath, 'utf-8');
+  return JSON.parse(jsonData);
+}
   
 /**
  * Get the zodiac sign based on the given month and day.
