@@ -1,8 +1,6 @@
 name: Full CI/CD Pipeline
 
-on:
-    push:
-        branches: [main, fortune-telling-dev, test-8ball-PWA]
+on: [push, fork]
 
 permissions:
     contents: read
