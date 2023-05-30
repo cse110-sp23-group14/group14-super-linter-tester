@@ -16,7 +16,10 @@ function readZodiacData(filePath) {
    * @param {object[]} zodiacSigns - Array of zodiac sign objects.
    * @returns {string|null} - Zodiac sign name or null if not found.
    */
-  function getZodiacSign(month, day, zodiacSigns) {
+  function getZodiacSign(month, day) {
+    
+    const zodiacData = readZodiacData('zodiac.json');
+    const zodiacSigns = zodiacData.ZodiacSigns;
     for (const sign of zodiacSigns) {
       if (
         (month === sign.startMonth && day >= sign.startDay) ||
@@ -35,7 +38,11 @@ function readZodiacData(filePath) {
    * @param {object} compatibilityData - Object representing zodiac sign compatibility.
    * @returns {string} - Compatibility status ("OK" or "UNKNOWN").
    */
-  function getCompatibility(zodiacSign1, zodiacSign2, compatibilityData) {
+  function getCompatibility(zodiacSign1, zodiacSign2) {
+    const zodiacData = readZodiacData('zodiac.json');
+  
+  
+  const compatibilityData = zodiacData.Compatibility;
     if (
       zodiacSign1 in compatibilityData &&
       zodiacSign2 in compatibilityData[zodiacSign1]
@@ -47,10 +54,12 @@ function readZodiacData(filePath) {
   
   // Example usage
   const zodiacData = readZodiacData('zodiac.json');
+  
   const zodiacSigns = zodiacData.ZodiacSigns;
   const compatibilityData = zodiacData.Compatibility;
   
-  const zodiacSign1 = getZodiacSign(7, 23, zodiacSigns); // Leo
-  const zodiacSign2 = getZodiacSign(9, 23, zodiacSigns); // Virgo
-  const compatibility = getCompatibility(zodiacSign1, zodiacSign2, compatibilityData);
+  const zodiacSign1 = getZodiacSign(7, 23); // Leo
+  const zodiacSign2 = getZodiacSign(9, 23); // Virgo
+  const compatibility = getCompatibility(zodiacSign1, zodiacSign2);
   console.log(compatibility); // Output: "OK"
+  console.log(zodiacSign1); // Output: "OK"
