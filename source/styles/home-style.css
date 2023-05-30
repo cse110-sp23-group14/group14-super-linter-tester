@@ -15,6 +15,10 @@ body {
     margin: 0;
 }
 
+.horoscope-content{
+    height: 100vh;
+}
+
 .nav-container {
     position: fixed;
     display: flex;
@@ -124,7 +128,7 @@ body {
 .site-content {
     display: flex;
     flex-direction: column;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
 }
 
 .title-box {
