@@ -77,5 +77,17 @@ window.addEventListener('DOMContentLoaded', (event)=> {
     
     });
 
-    
+    const shareBtn = document.querySelector('.shareBtn');
+    const shareContent = document.querySelector('.daily-content').innerHTML;
+    /**
+     * Copy daily-horoscope to cliipboard when share button is clicked
+     */
+    shareBtn.addEventListener('click', async () => {
+        try {
+            await navigator.clipboard.writeText('Hey 💖, I just checked my daily horoscope ✨and I couldn\'t wait to share it with you! According to the stars 🌌, for [Tauruses] [♉], ' + shareContent + ' How about you? Open our app and check your own forecast🌤, and let\'s compare our results📈. Who knows what the universe has in store for us today!');
+            console.log('Copy success');    // only for testing purpose
+          } catch (err) {
+            console.error('Failed to copy: ', err);
+          }
+    })
 });
