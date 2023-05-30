@@ -3,7 +3,7 @@
  * @param {string} filePath - Path to the JSON file.
  * @returns {object} - Parsed JSON data.
  */
-export function readZodiacData(filePath) {
+function readZodiacData(filePath) {
   const fs = require('fs');
   const jsonData = fs.readFileSync(filePath, 'utf-8');
   return JSON.parse(jsonData);
@@ -16,7 +16,7 @@ export function readZodiacData(filePath) {
  * @param {object[]} zodiacSigns - Array of zodiac sign objects.
  * @returns {string|null} - Zodiac sign name or null if not found.
  */
-export function getZodiacSign(month, day, zodiacSigns) {
+function getZodiacSign(month, day, zodiacSigns) {
   for (const sign of zodiacSigns) {
     if (
       (month === sign.startMonth && day >= sign.startDay) ||
@@ -54,3 +54,9 @@ const zodiacSign1 = getZodiacSign(7, 23, zodiacSigns); // Leo
 const zodiacSign2 = getZodiacSign(9, 23, zodiacSigns); // Virgo
 const compatibility = getCompatibility(zodiacSign1, zodiacSign2, compatibilityData);
 console.log(compatibility); // Output: "OK"
+
+// Export functions for horoscope.js
+module.exports = {
+  readZodiacData,
+  getZodiacSign,
+};
