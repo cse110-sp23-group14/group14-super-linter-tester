@@ -22,7 +22,18 @@ jobs:
         uses: andstor/jsdoc-action@v1
         with:
           source_dir: main/fortune-telling-dev/source
-          publish_branch: documentation
           output_dir: ./out
           template: minami
           front_page: README.md
+  
+      - name: Place in Docs branch
+        uses: actions/checkout@v3
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git checkout documentation
+          git add ./out/*
+          git commit -m "updated docs"
+          git push --set-upstream origin documentation
+
+
