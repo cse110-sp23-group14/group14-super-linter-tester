@@ -26,14 +26,11 @@ jobs:
           template: minami
           front_page: README.md
   
-      - name: Place in Docs branch
-        uses: actions/checkout@v3
-      - run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git checkout documentation
-          git add ./out/*
-          git commit -m "updated docs"
-          git push --set-upstream origin documentation
+      - name: Deploy Documentation
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+            deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+            publish_branch: documentation
+            publish_dir: ./out
 
 
