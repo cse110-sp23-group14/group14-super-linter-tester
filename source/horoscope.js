@@ -30,6 +30,7 @@ function generateHoroscope() {
   let inputToHash = Number(stringInputToHash);
   const hashValue = inputToHash % 13;
 
+  
 }
 
 /**
