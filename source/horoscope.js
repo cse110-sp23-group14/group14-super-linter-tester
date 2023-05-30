@@ -3,12 +3,12 @@ const t = require('./zodiac')
  *Read the JSON data from the given file path.
  *@param {string} filePath - Path to the JSON file.
  *@returns {object} - Parsed JSON data.
- 
+*/ 
 function readHoroscopeData(filePath) {
   const fs = require('fs');
   const jsonData = fs.readFileSync(filePath, 'utf-8');
   return JSON.parse(jsonData);
-}*/
+}
 
 /**
  * Finds user's sign and current date and returns an appropriate horoscope.
@@ -30,7 +30,10 @@ function generateHoroscope() {
   let inputToHash = Number(stringInputToHash);
   const hashValue = inputToHash % 13;
 
-  
+  // Read horoscopes.json and get today's horoscope
+  const horoscopes = readHoroscopeData("source/assets/generated-text/horoscopes.json");
+  let todayHoroscope = horoscopes[sign][hashValue];
+  return todayHoroscope;
 }
 
 /**

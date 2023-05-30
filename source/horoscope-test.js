@@ -4,3 +4,8 @@ user=1;
 test('properly adds two numbers', ()=>{
   expect(generateHoroscope(user)).toBe("I love astrology!")
 })
+
+
+test('find correct Aries horoscope', () => {
+  
+})
