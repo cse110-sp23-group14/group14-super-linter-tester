@@ -1,4 +1,4 @@
-export { getZodiacSign, readJsonData };
+module.exports = { readJsonData, getZodiacSign, getCompatibility }  
 
 /**
  * Read the JSON data from the given file path.
