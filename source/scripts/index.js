@@ -17,6 +17,28 @@ window.addEventListener('DOMContentLoaded', async (event)=> {
 
     const dailyReport = document.querySelector('.report');
 
+    function openNav() {
+        // Open Nav
+        isNavOpen = true;
+        navMenu.classList.add('nav-show');
+        navMenu.classList.remove('nav-hide');
+        navIconBars.classList.add('icon-hide');
+        navIconXMark.classList.remove('icon-hide');
+        navContainer.classList.add('nav-showBackground');
+        navContainer.classList.remove('nav-background-hide');
+    }
+
+    function closeNav() {
+        // Close Nav
+        isNavOpen = false;
+        navMenu.classList.add('nav-hide');
+        navMenu.classList.remove('nav-show');
+        navIconBars.classList.remove('icon-hide')
+        navIconXMark.classList.add('icon-hide');
+        navContainer.classList.add('nav-background-hide');
+        navContainer.classList.remove('nav-showBackground');
+    }
+
     /**
     * Event listener function for the 'click' event on the navButton.
     * 
@@ -25,27 +47,12 @@ window.addEventListener('DOMContentLoaded', async (event)=> {
     navButton.addEventListener('click', (event) => {
         if (isNavOpen)
         {
-            // Close Nav
-            isNavOpen = false;
-            navMenu.classList.add('nav-hide');
-            navMenu.classList.remove('nav-show');
-            navIconBars.classList.remove('icon-hide')
-            navIconXMark.classList.add('icon-hide');
-            navContainer.classList.add('nav-background-hide');
-            navContainer.classList.remove('nav-showBackground');
+            closeNav();
         }
         else {
-            // Open Nav
-            isNavOpen = true;
-            navMenu.classList.add('nav-show');
-            navMenu.classList.remove('nav-hide');
-            navIconBars.classList.add('icon-hide');
-            navIconXMark.classList.remove('icon-hide');
-            navContainer.classList.add('nav-showBackground');
-            navContainer.classList.remove('nav-background-hide');
-
-           
+            openNav();
         }
+
         const currentDate = new Date();
         const currentDateStr = currentDate.toDateString();
     
@@ -78,6 +85,13 @@ window.addEventListener('DOMContentLoaded', async (event)=> {
     
     });
 
+    const menuLinks = document.querySelectorAll('.nav a');
+    for (link of menuLinks) {
+        console.log(link);
+        link.addEventListener('click', (event) => {
+            closeNav();
+        });
+
     // Set horoscope popup text
     const dailyTitle = document.getElementsByClassName("daily-title")[0];
     const sign = await getSign();
@@ -103,23 +117,5 @@ window.addEventListener('DOMContentLoaded', async (event)=> {
           } catch (err) {
             console.error('Failed to copy: ', err);
           }
-    });
-
-    const nameForm = document.getElementById("name-form");
-    /**
-     * Update name in local storage to what user submitted
-     */
-    nameForm.addEventListener("submit", (event) => {
-        saveUserName();
-    });
-
-    const birthdayForm = document.getElementById("birthday-form");
-    /**
-     * Update birthday month and day in local storage to what user submitted
-     */
-    birthdayForm.addEventListener("submit", (event) => {
-        saveBirthday();
-    });
-
-    
+    })
 });

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  
   <title>Welcome to Zodiak</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +16,12 @@
   <meta charset="UTF-8">
   <link rel="manifest" href="manifest.json">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 
 <body>
@@ -36,8 +43,8 @@
         <a href="#" class="option">
             <h1 class="explore">Explore</h1>
         </a>
-        <a href="settings.html" class="option">
-            <h1 class="settings">Settings</h1>
+        <a href="#settingpage" class="option" id="settings-link">
+          <h1 class="settings">Settings</h1>
         </a>
       </div>
       <div class="subheading">
@@ -73,7 +80,7 @@
       <a class="button" href="#horoscope-popup">Today's horoscope</a>
     </div>
   </div>
-
+<section id="settingpage">
   <div class="site-content settings-content">
     <h1>Settings</h1>
     <div class="user-profile">
@@ -90,6 +97,7 @@
         <a class="edit-button"><i class="fa-solid fa-pen-to-square fa-2xl"></i></a>
     </div>
 </div>
+</section>
 <div id="user-edit-popup" class="overlay">
     <div class="popup">
       <a href="#popup1" id="show-settings-popup"> <h2>Edit User Profile</h2> </a>
@@ -162,9 +170,8 @@
     <button id="clear-birthday-button" onclick="clearBirthday()">Clear Birthday</button>
     </div>
   </div>
-
-  </body>
- 
 </body>
+ 
+
 
 </html>
