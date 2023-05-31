@@ -85,7 +85,12 @@ window.addEventListener('DOMContentLoaded', async (event)=> {
     // Set horoscope popup text
     const dailyTitle = document.getElementsByClassName("daily-title")[0];
     const sign = await getSign();
-    dailyTitle.innerHTML = `Sun in ${sign}`;
+    if (!sign) {
+        dailyTitle.innerHTML = "We don't know your sign yet! <br>Please fill out your settings!";
+    }
+    else {
+        dailyTitle.innerHTML = `Sun in ${sign}`;
+    }
 
     const dailyDate = document.getElementsByClassName("daily-date")[0];
     const date = new Date().toLocaleDateString();
@@ -110,7 +115,7 @@ window.addEventListener('DOMContentLoaded', async (event)=> {
     });
 
     const menuLinks = document.querySelectorAll('.nav a');
-    for (link of menuLinks) {
+    for (const link of menuLinks) {
         console.log(link);
         link.addEventListener('click', (event) => {
             closeNav();

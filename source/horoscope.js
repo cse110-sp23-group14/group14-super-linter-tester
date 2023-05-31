@@ -18,8 +18,11 @@ function readHoroscopeData(filePath) {
  */
 async function getSign() {
   // Getting Birthday Data
-  let birthday = localStorage.getItem('birthday');
-  let birthdaySplit = birthday.split(".");
+  const birthday = localStorage.getItem('birthday');
+  if (!birthday) {
+    return null;
+  }
+  const birthdaySplit = birthday.split(".");
 
   // Getting Zodiac sign data
   let sign = getZodiacSign(birthdaySplit[0], birthdaySplit[1]);
@@ -33,7 +36,10 @@ async function getSign() {
 async function generateHoroscope() {
   // Getting Zodiac sign data
   let sign = await getSign();
-  console.log("sign " + sign);
+  if (!sign) 
+  {
+    return "No horoscope found.";
+  }
   
   // Getting Date for hashing function
   const date = new Date();
@@ -45,9 +51,7 @@ async function generateHoroscope() {
 
   // Read horoscopes.json and get today's horoscope
   const horoscopes = await readJsonData("./assets/generated-text/horoscopes.json");
-  console.log(horoscopes);
   let todayHoroscope = horoscopes[sign][hashValue];
-  console.log(todayHoroscope);
   return todayHoroscope;
 }
 

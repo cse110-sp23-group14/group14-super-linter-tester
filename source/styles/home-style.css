@@ -228,6 +228,10 @@ body {
     background: #fff;
 }
 
+#horoscope-button {
+    transform: translateY(900%) translateX(830%);
+}
+
 .overlay {
     position: fixed;
     top: 0;

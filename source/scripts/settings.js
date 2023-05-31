@@ -42,7 +42,6 @@ function displayStoredBirthday() {
 function displayStoredName() {
     const nameInfoElement = document.getElementById('name-text');
     const storedName = localStorage.getItem('name');
-    console.log(storedName);
 
     if (storedName) {
         nameInfoElement.innerHTML = `The name we have for you is ${storedName}.`;
