@@ -118,4 +118,4 @@ window.addEventListener('DOMContentLoaded', async (event)=> {
             console.error('Failed to copy: ', err);
           }
     })
-});
+}});
