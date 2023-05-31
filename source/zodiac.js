@@ -1,5 +1,5 @@
 export { readJsonData, getZodiacSign, getCompatibility }
-
+//module.exports = { readJsonData, getZodiacSign, getCompatibility };
 /**
  * Read the JSON data from the given file path.
  * @param {string} filePath - Path to the JSON file.
@@ -12,7 +12,9 @@ async function readJsonData(filePath) {
     return jsonData;
   }
   catch (error) {
-    console.error(error);
+    const files = require('fs');
+    const jsonData = files.readFileSync(filePath, 'utf-8');
+    return JSON.parse(jsonData);
   }
 }
 
@@ -26,7 +28,7 @@ async function readJsonData(filePath) {
  */
 async function getZodiacSign(month, day) {
   try {
-    const zodiacData = await readJsonData('./zodiac.json');
+    const zodiacData = await readJsonData('source/zodiac.json');
     const zodiacSigns = zodiacData.ZodiacSigns;
 
     for (const sign of zodiacSigns) {
@@ -52,8 +54,8 @@ async function getZodiacSign(month, day) {
  * @param {object} compatibilityData - Object representing zodiac sign compatibility.
  * @returns {string} - Compatibility status ("OK" or "UNKNOWN").
  */
-function getCompatibility(zodiacSign1, zodiacSign2) {
-  const zodiacData = readJsonData('source/zodiac.json');
+async function getCompatibility(zodiacSign1, zodiacSign2) {
+  const zodiacData = await readJsonData('source/zodiac.json');
 
 
 const compatibilityData = zodiacData.Compatibility;
