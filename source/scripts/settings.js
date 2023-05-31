@@ -1,5 +1,4 @@
-import { getZodiacSign, readJsonData } from "./zodiac.js";
-export { saveUserName, saveBirthday };
+import { getZodiacSign, readJsonData } from "../zodiac.js";
 
 window.addEventListener('DOMContentLoaded', (event) => {
     // Call the functions to display the stored name and birthday
@@ -11,6 +10,30 @@ window.addEventListener('DOMContentLoaded', (event) => {
     clearNameButton.addEventListener('click', clearName);
     const clearBirthdayButton = document.getElementById('clear-birthday-button');
     clearBirthdayButton.addEventListener('click', clearBirthday);
+
+    document.getElementById('settings-link').addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+    
+    document.getElementById('home-link').addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+    
+    document.getElementById('report-link').addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 })
 
 /**
@@ -118,27 +141,3 @@ function navigateToNewPage(){
 function nagigateToProfile(){
     window.location.href = "userprofile.html"
 }
-
-document.getElementById('settings-link').addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    target.scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-
-  document.getElementById('home-link').addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    target.scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-
-  document.getElementById('report-link').addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    target.scrollIntoView({
-      behavior: 'smooth'
-    });
-  });

@@ -1,5 +1,4 @@
 import { getSign, generateHoroscope } from "../horoscope.js";
-import { saveUserName, saveBirthday } from "../setting.js";
 
 /**
  * Event listener function for the 'DOMContentLoaded' event.
@@ -45,52 +44,43 @@ window.addEventListener('DOMContentLoaded', async (event)=> {
     * @param {Event} event -The 'click' event object
     */
     navButton.addEventListener('click', (event) => {
-        if (isNavOpen)
-        {
+        if (isNavOpen) {
+            console.log("Closing nav...");
             closeNav();
         }
         else {
+            console.log("Open nav...");
             openNav();
         }
-
-        const currentDate = new Date();
-        const currentDateStr = currentDate.toDateString();
-    
-        const reportDate = new Date();
-        const reportDateStr = reportDate.toDateString();
-    
-        /**
-         * get the last visted date from localStorage 
-         * report being highlighted on the next day
-        */
-        const lastVisitDate = localStorage.getItem('last_visit');
-
-        if (lastVisitDate !== currentDateStr) {
-            localStorage.removeItem('report_read');
-         
-        };
-    
-        if (currentDateStr === reportDateStr) {
-            const isRead =localStorage.getItem('report_read');
-            if(!isRead) {
-                dailyReport.classList.add('highlight');
-            }
-        }
-       
-        dailyReport.addEventListener('click', function() {
-            dailyReport.classList.remove('highlight');
-            localStorage.setItem('report_read', true);
-        });
-        localStorage.setItem('last_visit', currentDateStr);
-    
     });
 
-    const menuLinks = document.querySelectorAll('.nav a');
-    for (link of menuLinks) {
-        console.log(link);
-        link.addEventListener('click', (event) => {
-            closeNav();
-        });
+    const currentDate = new Date();
+    const currentDateStr = currentDate.toDateString();
+
+    const reportDate = new Date();
+    const reportDateStr = reportDate.toDateString();
+
+    /**
+     * get the last visted date from localStorage 
+     * report being highlighted on the next day
+    */
+    const lastVisitDate = localStorage.getItem('last_visit');
+
+    if (lastVisitDate !== currentDateStr) {
+        localStorage.removeItem('report_read');
+    }
+    if (currentDateStr === reportDateStr) {
+        const isRead = localStorage.getItem('report_read');
+        if(!isRead) {
+            dailyReport.classList.add('highlight');
+        }
+    }
+   
+    dailyReport.addEventListener('click', function() {
+        dailyReport.classList.remove('highlight');
+        localStorage.setItem('report_read', true);
+    });
+    localStorage.setItem('last_visit', currentDateStr);
 
     // Set horoscope popup text
     const dailyTitle = document.getElementsByClassName("daily-title")[0];
@@ -110,11 +100,11 @@ window.addEventListener('DOMContentLoaded', async (event)=> {
     /**
      * Copy daily-horoscope to cliipboard when share button is clicked
      */
-    shareBtn.addEventListener('click', async () => {
+    shareBtn.addEventListener('click', async (event) => {
         try {
             await navigator.clipboard.writeText('Hey 💖, I just checked my daily horoscope ✨and I couldn\'t wait to share it with you! According to the stars 🌌, for ' + sign + ':\n' + shareContent + '\nHow about you? Open our app and check your own forecast🌤, and let\'s compare our results📈. Who knows what the universe has in store for us today!');
             console.log('Copy success');    // only for testing purpose
-          } catch (err) {
+        } catch (err) {
             console.error('Failed to copy: ', err);
           }
     });
@@ -126,6 +116,5 @@ window.addEventListener('DOMContentLoaded', async (event)=> {
             closeNav();
         });
     }
-}
 });
 
