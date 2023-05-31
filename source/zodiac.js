@@ -1,4 +1,4 @@
-module.exports = { readJsonData, getZodiacSign, getCompatibility }  
+export { readJsonData, getZodiacSign, getCompatibility }
 
 /**
  * Read the JSON data from the given file path.
@@ -25,18 +25,24 @@ async function readJsonData(filePath) {
  * @returns {string|null} - Zodiac sign name or null if not found.
  */
 async function getZodiacSign(month, day) {
-  const zodiacData = await readJsonData('./zodiac.json');
-  const zodiacSigns = zodiacData.ZodiacSigns;
+  try {
+    const zodiacData = await readJsonData('./zodiac.json');
+    const zodiacSigns = zodiacData.ZodiacSigns;
 
-  for (const sign of zodiacSigns) {
-    if (
-      (month == sign.startMonth && day >= sign.startDay) ||
-      (month == sign.endMonth && day <= sign.endDay)
-    ) {
-      return sign.name;
+    for (const sign of zodiacSigns) {
+      if (
+        (month == sign.startMonth && day >= sign.startDay) ||
+        (month == sign.endMonth && day <= sign.endDay)
+      ) {
+        return sign.name;
+      }
     }
   }
-  return null;
+  catch (error) {
+    console.error(error);
+    return null;
+  }
+  
 }
 
 /**

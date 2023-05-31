@@ -1,9 +1,4 @@
-
-const {
-  readJsonData,
-  getZodiacSign,
-  getCompatibility
-} = require('../zodiac.js');
+import { readJsonData, getZodiacSign, getCompatibility } from '../zodiac.js';
 
 //console.log(getZodiacSign);
 
