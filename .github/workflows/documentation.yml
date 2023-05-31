@@ -29,12 +29,18 @@ jobs:
           output_dir: ./out
           template: minami
           front_page: README.md
-  
-      - name: Deploy Documentation
-        uses: peaceiris/actions-gh-pages@v3
+
+      - name: Upload Docs to branch
+        uses: EndBug/add-and-commit@v9
         with:
-            deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-            publish_branch: documentation
-            publish_dir: ./out
+          add: ./out
+          new_branch: documentation
+  
+      # - name: Deploy Documentation
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #       deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+      #       publish_branch: documentation
+      #       publish_dir: ./out
 
 
