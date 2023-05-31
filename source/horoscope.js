@@ -1,4 +1,6 @@
-const t = require('./zodiac')
+export { getSign, generateHoroscope };
+import { getZodiacSign, readJsonData } from "./zodiac.js";
+
 /*
  *Read the JSON data from the given file path.
  *@param {string} filePath - Path to the JSON file.
@@ -11,16 +13,27 @@ function readHoroscopeData(filePath) {
 }
 
 /**
- * Finds user's sign and current date and returns an appropriate horoscope.
- * @returns {string} A horoscope in string form.
+ * Finds user's sign from birthday stored in local storage
+ * @returns {string|null} user's zodiac sign, or null if sign is not found
  */
-function generateHoroscope() {
+async function getSign() {
   // Getting Birthday Data
   let birthday = localStorage.getItem('birthday');
   let birthdaySplit = birthday.split(".");
 
   // Getting Zodiac sign data
   let sign = getZodiacSign(birthdaySplit[0], birthdaySplit[1]);
+  return sign;
+}
+
+/**
+ * Finds user's sign and current date and returns an appropriate horoscope.
+ * @returns {string} A horoscope in string form.
+ */
+async function generateHoroscope() {
+  // Getting Zodiac sign data
+  let sign = await getSign();
+  console.log("sign " + sign);
   
   // Getting Date for hashing function
   const date = new Date();
@@ -31,8 +44,10 @@ function generateHoroscope() {
   const hashValue = inputToHash % 13;
 
   // Read horoscopes.json and get today's horoscope
-  const horoscopes = readHoroscopeData("source/assets/generated-text/horoscopes.json");
+  const horoscopes = await readJsonData("./assets/generated-text/horoscopes.json");
+  console.log(horoscopes);
   let todayHoroscope = horoscopes[sign][hashValue];
+  console.log(todayHoroscope);
   return todayHoroscope;
 }
 
@@ -44,7 +59,8 @@ function getDailyConditions() {
   // Implementation goes here
 }
 
-module.exports = {
-  generateHoroscope,
-  getDailyConditions,
-};
+// module.exports = {
+//   generateHoroscope,
+//   getDailyConditions,
+//   getSign
+// };

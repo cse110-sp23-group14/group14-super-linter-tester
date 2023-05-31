@@ -1,10 +1,12 @@
+import { getSign, generateHoroscope } from "../horoscope.js";
+import { saveUserName, saveBirthday } from "../setting.js";
 
 /**
  * Event listener function for the 'DOMContentLoaded' event.
  * 
  * @param {Event} event -The 'DOMContentLoaded' event object
  */
-window.addEventListener('DOMContentLoaded', (event)=> {
+window.addEventListener('DOMContentLoaded', async (event)=> {
 
     const navButton = document.getElementById('nav-button');
     const navMenu = document.getElementsByClassName('nav-content')[0];
@@ -76,6 +78,19 @@ window.addEventListener('DOMContentLoaded', (event)=> {
     
     });
 
+    // Set horoscope popup text
+    const dailyTitle = document.getElementsByClassName("daily-title")[0];
+    const sign = await getSign();
+    dailyTitle.innerHTML = `Sun in ${sign}`;
+
+    const dailyDate = document.getElementsByClassName("daily-date")[0];
+    const date = new Date().toLocaleDateString();
+    dailyDate.innerHTML = `${date}`;
+
+    const dailyContent = document.getElementsByClassName("daily-content")[0];
+    dailyContent.innerHTML = await generateHoroscope();
+
+
     const shareBtn = document.querySelector('.shareBtn');
     const shareContent = document.querySelector('.daily-content').innerHTML;
     /**
@@ -83,10 +98,28 @@ window.addEventListener('DOMContentLoaded', (event)=> {
      */
     shareBtn.addEventListener('click', async () => {
         try {
-            await navigator.clipboard.writeText('Hey 💖, I just checked my daily horoscope ✨and I couldn\'t wait to share it with you! According to the stars 🌌, for [Tauruses] [♉], ' + shareContent + ' How about you? Open our app and check your own forecast🌤, and let\'s compare our results📈. Who knows what the universe has in store for us today!');
+            await navigator.clipboard.writeText('Hey 💖, I just checked my daily horoscope ✨and I couldn\'t wait to share it with you! According to the stars 🌌, for ' + sign + ':\n' + shareContent + '\nHow about you? Open our app and check your own forecast🌤, and let\'s compare our results📈. Who knows what the universe has in store for us today!');
             console.log('Copy success');    // only for testing purpose
           } catch (err) {
             console.error('Failed to copy: ', err);
           }
-    })
+    });
+
+    const nameForm = document.getElementById("name-form");
+    /**
+     * Update name in local storage to what user submitted
+     */
+    nameForm.addEventListener("submit", (event) => {
+        saveUserName();
+    });
+
+    const birthdayForm = document.getElementById("birthday-form");
+    /**
+     * Update birthday month and day in local storage to what user submitted
+     */
+    birthdayForm.addEventListener("submit", (event) => {
+        saveBirthday();
+    });
+
+    
 });

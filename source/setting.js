@@ -1,4 +1,5 @@
 import { getZodiacSign, readJsonData } from "./zodiac.js";
+export { saveUserName, saveBirthday };
 
 window.addEventListener('DOMContentLoaded', (event) => {
     // Call the functions to display the stored name and birthday
@@ -22,7 +23,7 @@ function displayStoredBirthday() {
     const storedBirthday = localStorage.getItem('birthday');
 
     if (storedBirthday) {
-        birthdayInfoElement.innerHTML = `The birthday we have for you is ${storedBirthday}.`;
+        birthdayInfoElement.innerHTML = `The birthday we have for you is <span class='highlight'>${storedBirthday}</span>.`;
     } else {
         birthdayInfoElement.innerHTML = "We don't have your <span class='highlight'>birth date</span> yet!";
     }
@@ -45,17 +46,18 @@ function displayStoredName() {
     }
 }
 
-function displayZodiac() {
+async function displayZodiac() {
     const zodiacInfoElement = document.getElementById('zodiac-text');
     const storedBirthday = localStorage.getItem('birthday');
     if (!storedBirthday) {
         zodiacInfoElement.innerHTML = "";
         return;
     }
-    const zodiacArray = readJsonData('zodiac.json');
-    const zodiacSign = getZodiacSign(storedBirthday.split('.')[0], storedBirthday.split('.')[1], zodiacArray);
+    const zodiacArray = await readJsonData('zodiac.json');
+    const zodiacSign = await getZodiacSign(storedBirthday.split('.')[0], storedBirthday.split('.')[1], zodiacArray);
+    console.log(zodiacSign);
     if (zodiacSign) {
-        zodiacInfoElement.innerHTML = zodiacSign;
+        zodiacInfoElement.innerHTML = `Your sign is <span class='highlight'>${zodiacSign}</span>!`;
     }
 }
 

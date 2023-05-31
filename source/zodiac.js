@@ -13,9 +13,9 @@ async function readJsonData(filePath) {
   }
   catch (error) {
     console.error(error);
-    return null;
   }
 }
+
   
 /**
  * Get the zodiac sign based on the given month and day.
@@ -24,13 +24,14 @@ async function readJsonData(filePath) {
  * @param {object[]} zodiacSigns - Array of zodiac sign objects.
  * @returns {string|null} - Zodiac sign name or null if not found.
  */
-function getZodiacSign(month, day) {
-  const zodiacData = readJsonData('source/zodiac.json');
+async function getZodiacSign(month, day) {
+  const zodiacData = await readJsonData('./zodiac.json');
   const zodiacSigns = zodiacData.ZodiacSigns;
+
   for (const sign of zodiacSigns) {
     if (
-      (month === sign.startMonth && day >= sign.startDay) ||
-      (month === sign.endMonth && day <= sign.endDay)
+      (month == sign.startMonth && day >= sign.startDay) ||
+      (month == sign.endMonth && day <= sign.endDay)
     ) {
       return sign.name;
     }

@@ -7,9 +7,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles/home-style.css">
-  <script type="module" src="scripts/setting.js"></script>
+  <script type="module" src="setting.js"></script>
   <link rel="stylesheet" href="styles/settings-style.css">
-  <script src="scripts/index.js"></script>
+  <script type="module" src="scripts/index.js"></script>
+  <script type="module" src="horoscope.js"></script>
   <script src="https://kit.fontawesome.com/ec9b6ab711.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <link rel="manifest" href="manifest.json">
@@ -94,7 +95,7 @@
       <a href="#popup1" id="show-settings-popup"> <h2>Edit User Profile</h2> </a>
       <a class="close" href="#show-settings-popup">&times;</a>
       <div id="change-name">
-        <form onsubmit="saveUserName()">
+        <form id="name-form">
             <label for="name">Change name:</label><br>
             <input type="text" id="name" name="name"><br>
             <input type="submit" value="Submit">
@@ -106,9 +107,9 @@
     <div id="birthday-info"></div><br>
     
     <div id="change-birthday">
-        <form onsubmit="saveBirthday()">
+        <form id="birthday-form">
             <label for="birthday-month">Change birthday:</label><br>
-        <select id="birthday-month" name="birthday-month" onchange="updateBirthdayDays()">
+        <select id="birthday-month" name="birthday-month">
             <option value="1">January</option>
             <option value="2">February</option>
             <option value="3">March</option>
