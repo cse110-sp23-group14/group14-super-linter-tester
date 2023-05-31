@@ -19,6 +19,14 @@ body {
     height: 100vh;
 }
 
+.box {
+    position: relative;
+    height: 0vh; 
+    width: 0vh;
+    border: none; 
+    background-color: transparent;
+  }
+  
 .nav-container {
     position: fixed;
     display: flex;
@@ -204,10 +212,20 @@ body {
     border: 2px solid #8c67b1;
     border-radius: 50px;
     text-decoration: none;
+    top: 50%;
+    right: 0;
+    transform: translateY(900%) translateX(730%);
+    display: block;
+    width: 140px; /* Adjust the width as needed */
+    margin-right: 20px;
+    background-color: #8c67b1;
+    align-items: center;
+    justify-content: center;
 }
 
+
 .button:hover {
-    background: #8c67b1;
+    background: #fff;
 }
 
 .overlay {

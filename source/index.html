@@ -2,26 +2,18 @@
 <html lang="en">
 
 <head>
-  
   <title>Welcome to Zodiak</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles/home-style.css">
-  <script type="module" src="setting.js"></script>
+  <script src="setting.js"></script>
   <link rel="stylesheet" href="styles/settings-style.css">
-  <script type="module" src="scripts/index.js"></script>
-  <script type="module" src="horoscope.js"></script>
+  <script src="scripts/index.js"></script>
   <script src="https://kit.fontawesome.com/ec9b6ab711.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <link rel="manifest" href="manifest.json">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
 </head>
 
 <body>
@@ -31,20 +23,20 @@
     <a id="nav-button"><i class="fa-solid fa-bars fa-2xl"></i><i class="fa-solid fa-xmark fa-2xl icon-hide"></i></a>
     <div class="nav-content nav-hide">
       <div class="nav">
-        <a href="#home" class="option" id="home-link">
+        <a href="index.html" class="option">
           <h1 class="home">Home</h1>
         </a>
-        <a href="#daily-report" class="option"  id="report-link">
+        <a href="#horoscope-popup" class="option">
             <h1 class="report" id="report">Daily Report</h1>
         </a>
-        <a href="#" class="option" id="compatibility-link">
+        <a href="#" class="option">
           <h1 class="compatibility">Compatibility </h1>
         </a>
         <a href="#" class="option">
             <h1 class="explore">Explore</h1>
         </a>
-        <a href="#settingpage" class="option" id="settings-link">
-          <h1 class="settings">Settings</h1>
+        <a href="settings.html" class="option">
+            <h1 class="settings">Settings</h1>
         </a>
       </div>
       <div class="subheading">
@@ -53,8 +45,6 @@
     </div>
   </div>
 
-  <section id="home"></section>
-
   <div class="site-content">
     <div class="title-box">
       <div class="title-content">
@@ -62,10 +52,10 @@
         <img id="title-logo" src="assets/title-logo.png" alt="Logo Image here">
       </div>
     </div>
-    <section id="daily-report">
+    
     <div id="horoscope-popup" class="overlay">
       <div class="popup">
-        <a class="close" href="#horoscope-popup-box">&times;</a>
+        <a class="close" href="#">&times;</a>
         <img class="daily-image" src="assets/title-logo.png" alt="daily horoscope image">
         <h1 class="daily-title">Sun in Leo</h1>
         <p class="daily-date">May 23, 2023</p>
@@ -75,15 +65,14 @@
         <button class="shareBtn">Share</button>
       </div>
     </div>
-  </section>
   </div>
 
-  <div class="site-content horoscope-content">
-    <div class="box" id="horoscope-popup-box">
+  <div class="site-content horoscope-content" style="background-image: url('assets/leo_constellation.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <!-- <div class="box" id="horoscope-popup-box"> -->
       <a class="button" href="#horoscope-popup">Today's horoscope</a>
-    </div>
+    <!-- </div> -->
   </div>
-<section id="settingpage">
+
   <div class="site-content settings-content">
     <h1>Settings</h1>
     <div class="user-profile">
@@ -100,13 +89,12 @@
         <a class="edit-button"><i class="fa-solid fa-pen-to-square fa-2xl"></i></a>
     </div>
 </div>
-</section>
 <div id="user-edit-popup" class="overlay">
     <div class="popup">
-      <a href="#popup1" id="show-settings-popup"> <h2>Edit User Profile</h2> </a>
-      <a class="close" href="#show-settings-popup">&times;</a>
+      <h2>Edit User Profile</h2>
+      <a class="close" href="#">&times;</a>
       <div id="change-name">
-        <form id="name-form">
+        <form onsubmit="saveUserName()">
             <label for="name">Change name:</label><br>
             <input type="text" id="name" name="name"><br>
             <input type="submit" value="Submit">
@@ -118,9 +106,9 @@
     <div id="birthday-info"></div><br>
     
     <div id="change-birthday">
-        <form id="birthday-form">
+        <form onsubmit="saveBirthday()">
             <label for="birthday-month">Change birthday:</label><br>
-        <select id="birthday-month" name="birthday-month">
+        <select id="birthday-month" name="birthday-month" onchange="updateBirthdayDays()">
             <option value="1">January</option>
             <option value="2">February</option>
             <option value="3">March</option>
@@ -173,8 +161,9 @@
     <button id="clear-birthday-button" onclick="clearBirthday()">Clear Birthday</button>
     </div>
   </div>
-</body>
- 
 
+  </body>
+ 
+</body>
 
 </html>
