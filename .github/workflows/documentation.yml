@@ -35,12 +35,3 @@ jobs:
         with:
           add: ./out
           new_branch: documentation
-  
-      # - name: Deploy Documentation
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #       deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-      #       publish_branch: documentation
-      #       publish_dir: ./out
-
-
