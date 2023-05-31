@@ -117,5 +117,15 @@ window.addEventListener('DOMContentLoaded', async (event)=> {
           } catch (err) {
             console.error('Failed to copy: ', err);
           }
-    })
-}});
+    });
+
+    const menuLinks = document.querySelectorAll('.nav a');
+    for (link of menuLinks) {
+        console.log(link);
+        link.addEventListener('click', (event) => {
+            closeNav();
+        });
+    }
+}
+});
+
