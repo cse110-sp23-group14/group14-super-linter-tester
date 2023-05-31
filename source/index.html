@@ -94,7 +94,7 @@
       <h2>Edit User Profile</h2>
       <a class="close" href="#">&times;</a>
       <div id="change-name">
-        <form onsubmit="saveUserName()">
+        <form id="save-name-form">
             <label for="name">Change name:</label><br>
             <input type="text" id="name" name="name"><br>
             <input type="submit" value="Submit">
@@ -106,7 +106,7 @@
     <div id="birthday-info"></div><br>
     
     <div id="change-birthday">
-        <form onsubmit="saveBirthday()">
+        <form id="save-birthday-form">
             <label for="birthday-month">Change birthday:</label><br>
         <select id="birthday-month" name="birthday-month" onchange="updateBirthdayDays()">
             <option value="1">January</option>

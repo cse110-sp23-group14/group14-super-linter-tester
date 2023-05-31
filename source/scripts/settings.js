@@ -11,29 +11,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const clearBirthdayButton = document.getElementById('clear-birthday-button');
     clearBirthdayButton.addEventListener('click', clearBirthday);
 
-    document.getElementById('settings-link').addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-    
-    document.getElementById('home-link').addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-    
-    document.getElementById('report-link').addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+    const saveUserNameForm = document.getElementById('save-name-form');
+    saveUserNameForm.addEventListener('submit', saveUserName);
+    const saveBirthdayForm = document.getElementById('save-birthday-form');
+    saveBirthdayForm.addEventListener('submit', saveBirthday);
 })
 
 /**
@@ -61,6 +42,7 @@ function displayStoredBirthday() {
 function displayStoredName() {
     const nameInfoElement = document.getElementById('name-text');
     const storedName = localStorage.getItem('name');
+    console.log(storedName);
 
     if (storedName) {
         nameInfoElement.innerHTML = `The name we have for you is ${storedName}.`;
