@@ -1,5 +1,5 @@
 # Net Ninjas (Group 14)
-Test
+
 ## Project Overview:
 
 ## Team Page:
