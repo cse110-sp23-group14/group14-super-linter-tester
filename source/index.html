@@ -30,13 +30,13 @@
     <a id="nav-button"><i class="fa-solid fa-bars fa-2xl"></i><i class="fa-solid fa-xmark fa-2xl icon-hide"></i></a>
     <div class="nav-content nav-hide">
       <div class="nav">
-        <a href="index.html" class="option">
+        <a href="#home" class="option" id="home-link">
           <h1 class="home">Home</h1>
         </a>
-        <a href="#horoscope-popup" class="option">
+        <a href="#daily-report" class="option"  id="report-link">
             <h1 class="report" id="report">Daily Report</h1>
         </a>
-        <a href="#" class="option">
+        <a href="#" class="option" id="compatibility-link">
           <h1 class="compatibility">Compatibility </h1>
         </a>
         <a href="#" class="option">
@@ -52,6 +52,8 @@
     </div>
   </div>
 
+  <section id="home"></section>
+
   <div class="site-content">
     <div class="title-box">
       <div class="title-content">
@@ -59,7 +61,7 @@
         <img id="title-logo" src="assets/title-logo.png" alt="Logo Image here">
       </div>
     </div>
-    
+    <section id="daily-report">
     <div id="horoscope-popup" class="overlay">
       <div class="popup">
         <a class="close" href="#horoscope-popup-box">&times;</a>
@@ -72,6 +74,7 @@
         <button class="shareBtn">Share</button>
       </div>
     </div>
+  </section>
   </div>
 
   <div class="site-content horoscope-content">
