@@ -3,11 +3,6 @@ run-name: Generate Documentation for all JS files in source
 on:
   workflow_call:
 
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
 jobs:
   documentation:
     runs-on: ubuntu-latest
