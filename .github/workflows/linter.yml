@@ -8,18 +8,16 @@ jobs:
     name: Build/Checkout
     runs-on: ubuntu-latest
 
+    # all code within this set of steps was copied from jekyll-gh-pages.yml as reference, but altered to have fetch-depth: 0 be
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
       #Adds the test-8ball-PWA branch to the pages
       - uses: actions/checkout@v3
         with:
           ref: test-8ball-PWA
           path: main/test-8ball-PWA
           clean: false
-          fetch-depth: 0
       - run: rm -rf main/test-8ball-PWA/.git
       #Adds the fortune-telling-dev branch to the pages
       - uses: actions/checkout@v3
@@ -27,7 +25,6 @@ jobs:
           ref: fortune-telling-dev
           path: main/fortune-telling-dev
           clean: false
-          fetch-depth: 0
       - run: rm -rf main/fortune-telling-dev/.git
       #Adds the documentation branch to the pages
       - uses: actions/checkout@v3
@@ -35,7 +32,6 @@ jobs:
           ref: documentation
           path: main/documentation
           clean: false
-          fetch-depth: 0
       - run: rm -rf main/documentation/.git
       
     #- name: Checkout Code
