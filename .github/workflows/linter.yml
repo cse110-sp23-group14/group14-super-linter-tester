@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    name: Lint Code Base
+    name: Build/Checkout
     runs-on: ubuntu-latest
 
     steps:
@@ -28,3 +28,6 @@ jobs:
         VALIDATE_JAVASCRIPT_ES: true
         VALIDATE_JSON: true
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - run:
+        echo ${{ github.workspace }}
+        echo $GITHUB_WORKSPACE
