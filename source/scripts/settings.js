@@ -23,6 +23,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
  * @returns {void}
  */
 function displayStoredBirthday() {
+const my_name = "Tim";  // MAKE SURE TO GET RID OF THISSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
     const birthdayInfoElement = document.getElementById('birthday-text');
     const storedBirthday = localStorage.getItem('birthday');
 
