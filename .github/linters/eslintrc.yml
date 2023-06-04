@@ -41,10 +41,10 @@ plugins:
 #########
 # Rules #
 #########
-rules: { 
+rules: 
   camelcase: error
-
-}
+  eqeqeq: warn
+  strict: off
 
 ##############################
 # Overrides for JSON parsing #
