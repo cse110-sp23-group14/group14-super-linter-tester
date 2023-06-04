@@ -17,6 +17,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
     saveBirthdayForm.addEventListener('submit', saveBirthday);
 })
 
+function sum(left_operand, right_operand) {
+    if (left_operand == right_operand) {
+        
+    }
+    return left_operand + right_operand;
+}
+
 /**
  * Displays the stored birthday information on the webpage.
  * @function
