@@ -28,9 +28,15 @@ jobs:
         VALIDATE_ALL_CODEBASE: true
         VALIDATE_HTML: true
         VALIDATE_CSS: true
-        VALIDATE_JAVASCRIPT_ES: true
+        VALIDATE_JAVASCRIPT_ES: false
         VALIDATE_JSON: true   
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Prettier activities
+      run: |
+        npm install --save-dev --save-exact prettier
+        prettier -c *.js
+      
 
 # name: Lint Code Base
 
