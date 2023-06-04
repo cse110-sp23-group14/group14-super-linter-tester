@@ -41,11 +41,11 @@ plugins:
 #########
 # Rules #
 #########
-rules: {
-  camelcase: warn,
-  eqeqeq: warn,
+rules: 
+  camelcase: warn
+  eqeqeq: warn
   strict: off
-}
+
   
 
 
