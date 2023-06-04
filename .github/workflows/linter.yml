@@ -26,7 +26,17 @@ jobs:
     - uses: super-linter/super-linter@v5.0.0
       env:
         VALIDATE_ALL_CODEBASE: true
+        VALIDATE_HTML: true
+        VALIDATE_CSS: true
+        VALIDATE_JAVASCRIPT_ES: true
+        VALIDATE_JSON: true   
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    # - name: Prettier activities
+    #   run: |
+    #     npm install --save-dev --save-exact prettier
+    #     prettier -c *.js
+      
 
 # name: Lint Code Base
 

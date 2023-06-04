@@ -43,6 +43,10 @@ plugins:
 #########
 rules: 
   camelcase: warn
+  eqeqeq: warn
+  strict: off
+
+  
 
 
 ##############################
