@@ -59,7 +59,10 @@ jobs:
           rm -rf admin
           rm -rf source
           rm -rf specs
+          cp -a out/. .
+          rm -rf out
           git status
           git add *
+          git commit -m "added docs"
           git push
           ls -a
