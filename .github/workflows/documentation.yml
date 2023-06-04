@@ -52,9 +52,10 @@ jobs:
 
       - name: Clean up docs branch
         run: |
-          rm -r .github
-          rm -r admin
-          rm -r source
-          rm -r specs
+          ls -a
+          rm -rf .github
+          rm -rf admin
+          rm -rf source
+          rm -rf specs
           git add *
           git push
