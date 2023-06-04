@@ -17,7 +17,7 @@ jobs:
               with:
                     node-version: 18
             - run: npm ci
-            - run: npm run serve-port & npm test
+            - run: timeout 30 npm run serve-port & npm test
               
             
 
