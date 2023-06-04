@@ -4,7 +4,7 @@ describe('Basic user flow for Website', () => {
     beforeAll(async () => {
         const browser = await puppeteer.launch();
         const page = await browser.newPage();
-        await page.goto('http://localhost:36873/source/');
+        await page.goto('http://localhost:9000/source/');
     });
 
     it('Basic test', async () => {
