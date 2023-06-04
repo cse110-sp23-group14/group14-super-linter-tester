@@ -54,6 +54,9 @@ jobs:
           git rm -rf admin
           git rm -rf source
           git rm -rf specs
+          git rm babel.config.js
+          git rm package-lock.json
+          git rm package.json
           cp -a out/. .
           git rm -rf out
           git add *
