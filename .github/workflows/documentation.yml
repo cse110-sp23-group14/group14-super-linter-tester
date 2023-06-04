@@ -56,7 +56,5 @@ jobs:
           rm -r admin
           rm -r source
           rm -r specs
-          # cp -a out/. .
-          rm -r out
           git add *
           git push
