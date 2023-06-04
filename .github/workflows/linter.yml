@@ -23,19 +23,19 @@ jobs:
 
   # You may pin to the exact commit or the version.
   # uses: super-linter/super-linter@45fc0d88288beee4701c62761281edfee85655d7
-    # - uses: super-linter/super-linter@v5.0.0
-    #   env:
-    #     VALIDATE_ALL_CODEBASE: true
-    #     VALIDATE_HTML: true
-    #     VALIDATE_CSS: true
-    #     VALIDATE_JAVASCRIPT_ES: false
-    #     VALIDATE_JSON: true   
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - uses: super-linter/super-linter@v5.0.0
+      env:
+        VALIDATE_ALL_CODEBASE: true
+        VALIDATE_HTML: true
+        VALIDATE_CSS: true
+        VALIDATE_JAVASCRIPT_ES: true
+        VALIDATE_JSON: true   
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Prettier activities
-      run: |
-        npm install --save-dev --save-exact prettier
-        prettier -c *.js
+    # - name: Prettier activities
+    #   run: |
+    #     npm install --save-dev --save-exact prettier
+    #     prettier -c *.js
       
 
 # name: Lint Code Base
