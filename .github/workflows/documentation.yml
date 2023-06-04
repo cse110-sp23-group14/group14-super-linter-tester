@@ -31,9 +31,12 @@ jobs:
           template: minami
           front_page: README.md
           
-      - name: Delete documentation branch
-        run:
-          git push origin -d documentation
+      - name: Check if Docs Exists
+        run: echo "DOCS_EXIST=$(git ls-remote --heads origin documentation | wc -l)" >> $GITHUB_ENV
+        
+      - name: Delete Docs Branch
+        if: ${{ env.DOCS_EXIST == 1}}
+        run: git push origin -d documentation
 
       - name: Upload Docs to branch
         uses: EndBug/add-and-commit@v9
@@ -41,3 +44,20 @@ jobs:
           add: './out/*'
           fetch: false
           new_branch: documentation
+
+      - name: Go to docs branch
+        uses: actions/checkout@v3
+        with:
+          ref: documentation
+
+      - name: Clean up docs branch
+        run: |
+          git rm -rf .github
+          git rm -rf admin
+          git rm -rf source
+          git rm -rf specs
+          cp -a out/. .
+          git rm -rf out
+          git add *
+          git commit -m "added docs"
+          git push
