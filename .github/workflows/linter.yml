@@ -1,54 +1,85 @@
-name: Lint Code Base
+name: CI for fortune-telling-dev branch
 
 on:
+  push:
+    branches: [fortune-telling-dev]
   workflow_call:
+  workflow_dispatch:
 
 jobs:
-  build:
-    name: Checkout and Lint
-    runs-on: ubuntu-latest
-
-    # all code within this set of steps was copied from jekyll-gh-pages.yml as reference, but altered to have fetch-depth: 0 be
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      #Adds the test-8ball-PWA branch to the pages
-      - uses: actions/checkout@v3
-        with:
-          ref: test-8ball-PWA
-          path: main/test-8ball-PWA
-          clean: false
-      - run: rm -rf main/test-8ball-PWA/.git
-      #Adds the fortune-telling-dev branch to the pages
-      - uses: actions/checkout@v3
-        with:
-          ref: fortune-telling-dev
-          path: main/fortune-telling-dev
-          clean: false
-      - run: rm -rf main/fortune-telling-dev/.git
-      #Adds the documentation branch to the pages
-      - uses: actions/checkout@v3
-        with:
-          ref: documentation
-          path: main/documentation
-          clean: false
-      - run: rm -rf main/documentation/.git
-      
-    #- name: Checkout Code
-    #  uses: actions/checkout@v3
-    #  with:
-    #    fetch-depth: 0
-
-      - name: Super-Linter
-        uses: github/super-linter@v4
-        env:
-          VALIDATE_ALL_CODEBASE: true
-          VALIDATE_HTML: true
-          VALIDATE_CSS: true
-          VALIDATE_JAVASCRIPT_ES: true
-          VALIDATE_JSON: true
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  lint:
     
-  #Note: when we separated build and lint into different jobs, we first observe the issue that "no files were found", or the error:
-  # [WARN]   No files were found in the GITHUB_WORKSPACE:[/github/workspace] to lint!
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Super-Linter
+      uses: actions/checkout@v3
+      with:
+        ref: fortune-telling-dev
+        clean: false
+    - uses: actions/setup-node@v3
+      with:
+            node-version: 18
+
+  # You may pin to the exact commit or the version.
+  # uses: super-linter/super-linter@45fc0d88288beee4701c62761281edfee85655d7
+    - uses: super-linter/super-linter@v5.0.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+# name: Lint Code Base
+
+# on:
+#   workflow_call:
+
+# jobs:
+#   build:
+#     name: Checkout and Lint
+#     runs-on: ubuntu-latest
+
+#     # all code within this set of steps was copied from jekyll-gh-pages.yml as reference, but altered to have fetch-depth: 0 be
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v3
+#       #Adds the test-8ball-PWA branch to the pages
+#       - uses: actions/checkout@v3
+#         with:
+#           ref: test-8ball-PWA
+#           path: main/test-8ball-PWA
+#           clean: false
+#       - run: rm -rf main/test-8ball-PWA/.git
+#       #Adds the fortune-telling-dev branch to the pages
+#       - uses: actions/checkout@v3
+#         with:
+#           ref: fortune-telling-dev
+#           path: main/fortune-telling-dev
+#           clean: false
+#       - run: rm -rf main/fortune-telling-dev/.git
+#       #Adds the documentation branch to the pages
+#       - uses: actions/checkout@v3
+#         with:
+#           ref: documentation
+#           path: main/documentation
+#           clean: false
+#       - run: rm -rf main/documentation/.git
+      
+#     #- name: Checkout Code
+#     #  uses: actions/checkout@v3
+#     #  with:
+#     #    fetch-depth: 0
+
+#       - name: Super-Linter
+#         uses: github/super-linter@v4
+#         env:
+#           VALIDATE_ALL_CODEBASE: true
+#           VALIDATE_HTML: true
+#           VALIDATE_CSS: true
+#           VALIDATE_JAVASCRIPT_ES: true
+#           VALIDATE_JSON: true
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+#   #Note: when we separated build and lint into different jobs, we first observe the issue that "no files were found", or the error:
+#   # [WARN]   No files were found in the GITHUB_WORKSPACE:[/github/workspace] to lint!
+
+
     

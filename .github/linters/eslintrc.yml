@@ -42,9 +42,8 @@ plugins:
 # Rules #
 #########
 rules: 
-  - camelcase: warn
-  - eqeqeq: warn
-  - strict: off
+  camelcase: warn
+
 
 ##############################
 # Overrides for JSON parsing #
