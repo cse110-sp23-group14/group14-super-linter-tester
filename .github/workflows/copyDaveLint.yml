@@ -1,7 +1,10 @@
 name: CI for fortune-telling-dev branch
 
 on:
-  pull_request:
+  push:
+    branches: [fortune-telling-dev]
+  workflow_call:
+  workflow_dispatch:
 
 jobs:
   lint:
