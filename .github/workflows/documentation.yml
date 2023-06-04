@@ -4,6 +4,9 @@ on:
   workflow_call:
   workflow_dispatch:
 
+env:
+  DOC_EXISTS: ${{ true }}
+
 permissions:
   contents: write
   pages: write
@@ -31,9 +34,12 @@ jobs:
           template: minami
           front_page: README.md
           
-      - name: Delete documentation branch
-        run:
-          git push origin -d documentation
+      - name: Check if Docs Exists
+        run: echo "DOCS_EXIST=$(git ls-remote --heads origin documentation | wc -l)" >> $GITHUB_ENV
+        
+      - name: Delete Docs Branch
+        if: ${{ env.DOCS_EXIST == 1}}
+        run: git push origin -d documentation
 
       - name: Upload Docs to branch
         uses: EndBug/add-and-commit@v9
