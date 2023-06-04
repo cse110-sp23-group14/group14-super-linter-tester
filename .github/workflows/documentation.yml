@@ -52,17 +52,12 @@ jobs:
 
       - name: Clean up docs branch
         run: |
-          ls -a
-          git status
-          pwd
           git rm -rf .github
           git rm -rf admin
           git rm -rf source
           git rm -rf specs
           cp -a out/. .
           git rm -rf out
-          git status
           git add *
           git commit -m "added docs"
           git push
-          ls -a
