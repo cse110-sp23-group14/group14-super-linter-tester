@@ -55,12 +55,12 @@ jobs:
           ls -a
           git status
           pwd
-          rm -rf .github
-          rm -rf admin
-          rm -rf source
-          rm -rf specs
+          git rm -rf .github
+          git rm -rf admin
+          git rm -rf source
+          git rm -rf specs
           cp -a out/. .
-          rm -rf out
+          git rm -rf out
           git status
           git add *
           git commit -m "added docs"
