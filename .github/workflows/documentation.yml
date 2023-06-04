@@ -53,6 +53,8 @@ jobs:
       - name: Clean up docs branch
         run: |
           ls -a
+          git status
+          pwd
           rm -rf .github
           rm -rf admin
           rm -rf source
