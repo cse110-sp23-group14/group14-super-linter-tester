@@ -41,8 +41,10 @@ plugins:
 #########
 # Rules #
 #########
-rules: 
+rules: {
   camelcase: warn
+}
+  
 
 
 ##############################
