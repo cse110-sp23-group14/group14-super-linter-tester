@@ -42,10 +42,8 @@ plugins:
 # Rules #
 #########
 rules: 
-  camelcase: warn
-  eqeqeq: warn
-  strict: off
-
+  camelcase: error
+  
   
 
 
